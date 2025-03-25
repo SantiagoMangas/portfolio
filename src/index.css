@@ -2,7 +2,7 @@
 
 /* Base dark mode styles */
 body {
-  @apply bg-white text-black;
+  @apply bg-[#F2F6D0] text-black;
 }
 
 .dark {

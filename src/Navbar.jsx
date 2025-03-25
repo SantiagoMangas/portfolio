@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='bg-[#FCF596] flex justify-between items-center h-20 px-4 text-black'>
+    <div className='bg-[#F2F6D0] dark:bg-[#D98324] flex justify-between items-center h-20 px-4 text-black dark:text-white transition-colors duration-300'>
       <h1 className="w-full text-3xl font-bold">Mangas</h1>
 
       {/* Desktop Menu */}
@@ -27,7 +27,10 @@ const Navbar = () => {
           {navItems.map((item) => (
             <li
               key={item.id}
-              className="flex items-center justify-center whitespace-nowrap hover:bg-[#DEAA79] rounded-xl m-2 cursor-pointer duration-300 hover:text-black"
+              className="flex items-center justify-center whitespace-nowrap 
+              hover:bg-[#EFDCAB] dark:hover:bg-[#443627]
+              rounded-xl m-2 cursor-pointer duration-300 
+              hover:text-black dark:hover:text-white"
             >
               <Link
                 to={item.path}
@@ -44,7 +47,17 @@ const Navbar = () => {
       {/* Mobile Menu Toggle */}
       <div className="md:hidden flex items-center">
         <div onClick={handleNav} className='mr-4'>
-          {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+          {nav ? (
+            <AiOutlineClose 
+              size={20} 
+              className="dark:text-white" 
+            />
+          ) : (
+            <AiOutlineMenu 
+              size={20} 
+              className="dark:text-white" 
+            />
+          )}
         </div>
       </div>
 
@@ -52,21 +65,27 @@ const Navbar = () => {
       <div
         className={`
           fixed md:hidden left-0 top-0 w-[60%] h-full 
-          border-r border-r-gray-900 bg-[#FCF596]
+          border-r border-r-gray-900 dark:border-r-neutral-700
+          bg-[#F2F6D0] dark:bg-[#D98324]
           ease-in-out duration-500 
           flex flex-col
           ${nav ? 'translate-x-0' : '-translate-x-full'}
+          text-black dark:text-white
+          transition-colors
         `}
       >
         {/* Mobile Logo */}
-        <h1 className='w-full text-3xl font-bold text-black m-4'>Mangas.</h1>
+        <h1 className='w-full text-3xl font-bold text-black dark:text-white m-4'>Mangas.</h1>
 
         {/* Mobile Navigation Items */}
         <ul className='flex-grow'>
           {navItems.map(item => (
             <li
               key={item.id}
-              className='p-1 border-b rounded-xl hover:bg-[#DEAA79] duration-300 hover:text-black cursor-pointer border-gray-600'
+              className='p-1 border-b border-gray-300 dark:border-neutral-700 
+              rounded-xl hover:bg-[#EFDCAB] dark:hover:bg-[#443627]
+              duration-300 hover:text-black dark:hover:text-white 
+              cursor-pointer'
             >
               <Link 
                 to={item.path}
