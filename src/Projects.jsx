@@ -1,10 +1,15 @@
 import React from 'react';
+import CardProjects from './CardProjects';
 
 function Projects() {
   return (
     <div>
-      <h1>Projects</h1>
-      <p>Aquí puedes poner tu formulario de Projects.</p>
+      <CardProjects 
+        title="Mi Primer Proyecto" 
+        description="Una descripción detallada del proyecto"
+        technologies={['React', 'Tailwind', 'MongoDB', 'Express']}
+        imageUrl="./src/assets/images/comingSoon.jpg"
+      />
     </div>
   );
 }   
