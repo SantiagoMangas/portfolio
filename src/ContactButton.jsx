@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactButton = () => {
   return (
-    <button className="cursor-pointer group relative bg-[#EFDCAB] hover:bg-[#D98324] text-black font-semibold text-sm px-6 py-3 rounded-full transition-all duration-200 ease-in-out shadow hover:shadow-lg w-40 h-12">
+    <button className="cursor-pointer group relative bg-[#F97316] hover:bg-[#73BBA3] text-black font-semibold text-sm px-6 py-3 rounded-full transition-all duration-200 ease-in-out shadow hover:shadow-lg w-40 h-12">
       <div className="relative flex items-center justify-center gap-2">
         <span className="relative inline-block overflow-hidden">
           <span className="block transition-transform duration-300 group-hover:-translate-y-full">

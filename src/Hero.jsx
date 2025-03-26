@@ -14,8 +14,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden bg-[#fffef2] dark:bg-[#D98324] py-20 md:py-32 transition-colors duration-300">
-
+    <section className="hero-section relative overflow-hidden bg-white dark:bg-[#1E1E1E] py-20 md:py-32">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col md:flex-row md:items-start md:gap-4 lg:gap-6">
           {/* Image column */}
@@ -26,7 +25,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             <div className="relative mx-auto max-w-[200px]">
-              <div className="relative overflow-hidden rounded-xl border border-[#B1C29E]/40 bg-[#ffffff] dark:bg-[#D98324] p-1 shadow-xl">
+              <div className="relative overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#1E1E1E] p-1 shadow-xl">
                 <img
                   src="./src/assets/images/logoHero.jpeg"
                   alt="Santiago Mangas"
@@ -35,14 +34,14 @@ export default function Hero() {
               </div>
 
               {/* Tech stack indicators */}
-              <div className="absolute -right-4 top-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#F2F6D0]/70 backdrop-blur-md shadow-lg">
-                <Code className="h-5 w-5 text-[#964d00]" />
+              <div className="absolute -right-4 top-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#73BBA3]/70 dark:bg-[#88D66C]/70 backdrop-blur-md shadow-lg">
+                <Code className="h-5 w-5 text-white" />
               </div>
-              <div className="absolute -left-4 bottom-20 flex h-12 w-12 items-center justify-center rounded-full bg-[#F2F6D0]/70 backdrop-blur-md shadow-lg">
-                <Layers className="h-5 w-5 text-[#964d00]" />
+              <div className="absolute -left-4 bottom-20 flex h-12 w-12 items-center justify-center rounded-full bg-[#73BBA3]/70 dark:bg-[#88D66C]/70 backdrop-blur-md shadow-lg">
+                <Layers className="h-5 w-5 text-white" />
               </div>
-              <div className="absolute -bottom-2 right-12 flex h-12 w-12 items-center justify-center rounded-full bg-[#F2F6D0]/70 backdrop-blur-md shadow-lg">
-                <Zap className="h-5 w-5 text-[#964d00]" />
+              <div className="absolute -bottom-2 right-12 flex h-12 w-12 items-center justify-center rounded-full bg-[#73BBA3]/70 dark:bg-[#88D66C]/70 backdrop-blur-md shadow-lg">
+                <Zap className="h-5 w-5 text-white" />
               </div>
             </div>
           </motion.div>
@@ -58,13 +57,13 @@ export default function Hero() {
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="inline-block -rotate-2 rounded-full bg-[#F2F6D0]/50 backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-[#443627] shadow-sm"
+              className="inline-block -rotate-2 rounded-full bg-[#F0A04B]/20 backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-[#F0A04B] dark:text-[#FF6B6B] shadow-sm"
             >
               ¡Bienvenido! Soy
             </motion.div>
 
             <motion.h1
-              className="mt-3 text-4xl font-bold tracking-tight text-[#443627] dark:text-[#F2F6D0] sm:text-5xl md:text-6xl"
+              className="mt-3 text-4xl font-bold tracking-tight text-black dark:text-white sm:text-5xl md:text-6xl"
               initial={{ x: 20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -90,7 +89,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.h2
-              className="mt-3 text-2xl font-semibold text-[#D98324] dark:text-[#F2F6D0] md:text-3xl rotate-1 inline-block"
+              className="mt-3 text-2xl font-semibold text-[#73BBA3] dark:text-[#88D66C] md:text-3xl rotate-1 inline-block"
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
@@ -100,7 +99,7 @@ export default function Hero() {
             </motion.h2>
 
             <motion.p
-              className="mt-2 text-xl text-[#D98324]/80 dark:text-[#FCE7C8]/80"
+              className="mt-2 text-xl text-[#F0A04B] dark:text-[#FF6B6B]"
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.7 }}
@@ -109,7 +108,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.p
-              className="mt-4 max-w-md text-[#D98324]/70 dark:text-[#FCE7C8]/70 md:mx-0"
+              className="mt-4 max-w-md text-black/70 dark:text-white/70 md:mx-0"
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.8 }}
