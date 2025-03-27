@@ -1,15 +1,14 @@
 import React from 'react';
-import Navbar from './Navbar';
 import Hero from './Hero';
-import CardProjects from './CardProjects';
 import Division from './Division';
+import Projects from './Projects';
 
 const Home = () => {
   return (
-    <div>
+  <div>
       <Hero />
       <Division />
-      <CardProjects />
+      <Projects />
     </div>
   );
 };
