@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import Switch from "./Switch"
+import { Home, Phone, Info, Briefcase } from "lucide-react";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -22,14 +23,14 @@ const Navbar = () => {
   }, [nav])
 
   const navItems = [
-    { id: 1, text: "Home", path: "/" },
-    { id: 2, text: "Contacto", path: "/contact" },
-    { id: 3, text: "Proyectos", path: "/projects" },
-    { id: 4, text: "Sobre mi", path: "/about" },
+    { id: 1, text: "Inicio", path: "/" , icon: <Home size={20} /> },
+    { id: 2, text: "Contacto", path: "/contact", icon: <Phone size={20} /> },
+    { id: 3, text: "Proyectos", path: "/projects", icon: <Briefcase size={20} /> },
+    { id: 4, text: "Sobre mi", path: "/about", icon: <Info size={20} /> },
   ]
 
   return (
-    <div className="navbar bg-white dark:bg-[#1E1E1E] flex justify-between items-center h-20 px-4 text-black dark:text-white shadow-sm z-50 relative">
+    <div className="navbar bg-[#B4E380] dark:bg-[#1E1E1E] flex justify-between items-center h-20 px-4 text-black dark:text-white shadow-sm z-50 relative">
       <h1 className="w-full text-3xl font-bold">Mangas</h1>
 
       {/* Desktop Menu */}
@@ -39,7 +40,7 @@ const Navbar = () => {
             <li
               key={item.id}
               className="flex items-center justify-center whitespace-nowrap 
-              hover:bg-gray-100 dark:hover:bg-neutral-800
+              hover:bg-[#73BBA3] dark:hover:bg-neutral-800
               rounded-xl m-2 cursor-pointer duration-300"
             >
               <Link to={item.path} className="block w-full h-full p-4 dark:text-white">
@@ -55,9 +56,9 @@ const Navbar = () => {
       <div className="md:hidden flex items-center">
         <button
           onClick={handleNav}
-          className="relative w-10 h-10 flex justify-center items-center rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors duration-300"
+          className="relative w-10 h-10 flex justify-center items-center rounded-full hover:bg-[#73BBA3] dark:hover:bg-neutral-800 transition-colors duration-300"
           aria-label={nav ? "Cerrar menú" : "Abrir menú"}
-        >
+        > {/*Este es el button del menu hamburguesa */}
           <div className="block w-5 absolute">
             <span
               className={`block absolute h-0.5 w-5 bg-current transform transition duration-300 ease-in-out ${
@@ -92,7 +93,7 @@ const Navbar = () => {
           mobile-menu
           fixed md:hidden left-0 top-0 w-[70%] h-full z-50
           border-r border-r-gray-300 dark:border-r-neutral-700
-          bg-white dark:bg-[#1E1E1E]
+          bg-[#B4E380] dark:bg-[#73BBA3]
           text-black dark:text-white
           shadow-2xl
           transition-transform duration-300 ease-in-out
@@ -100,11 +101,11 @@ const Navbar = () => {
         `}
       >
         {/* Mobile Logo */}
-        <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-neutral-700">
+        <div className="bg-white flex justify-between items-center p-4 border-b border-gray-200 dark:border-neutral-700">
           <h1 className="text-2xl font-bold dark:text-white">Mangas.</h1>
           <button
             onClick={handleNav}
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800 transition-colors duration-300"
+            className="p-2 rounded-full hover:bg-[#73BBA3] dark:hover:bg-neutral-800 transition-colors duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +120,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation Items */}
-        <div className="p-4 flex-grow">
+        <div className="bg-[#B4E380] p-4 flex-grow">
           <ul className="space-y-2">
             {navItems.map((item, index) => (
               <li
@@ -129,11 +130,12 @@ const Navbar = () => {
                   transform: nav ? "translateX(0)" : "translateX(-20px)",
                   transition: `opacity 0.3s ease, transform 0.3s ease ${index * 0.1}s`,
                 }}
-                className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-800
+                className="p-2 rounded-lg hover:bg-[#73BBA3] dark:hover:bg-neutral-800
                 duration-300 cursor-pointer"
               >
-                <Link to={item.path} onClick={handleNav} className="flex w-full h-full p-2 dark:text-white">
-                  {item.text}
+                <Link to={item.path} onClick={handleNav} className="flex w-full h-full p-2 dark:text-black space-x-2">
+                  {item.icon} {/* Icono dinámico */}
+                  <span>{item.text}</span>
                 </Link>
               </li>
             ))}
@@ -147,7 +149,7 @@ const Navbar = () => {
             transform: nav ? "translateY(0)" : "translateY(20px)",
             transition: "opacity 0.3s ease, transform 0.3s ease 0.4s",
           }}
-          className="flex justify-center p-4 border-t border-gray-200 dark:border-neutral-700"
+          className="bg-[#88D66C] flex justify-center p-4 border-t border-gray-200 dark:border-neutral-700"
         >
           <Switch />
         </div>
