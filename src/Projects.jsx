@@ -5,7 +5,7 @@ function Projects() {
   return (
     <div className='relative overflow-hidden bg-white py-16 md:py-24 lg:py-32 min-h-screen flex justify-center'>
         {/* Fondo difuso de color verde */}
-        <div className="absolute top-0 right-0 -mt-24 -mr-24 w-80 h-60 rounded-full bg-[#73BBA3]/40 blur-3xl pointer-events-none"></div>
+        <div className="absolute top-0 right-0 -mt-24 -mr-24 w-80 h-60 rounded-full bg-[#73BBA3]/65 blur-3xl pointer-events-none"></div>
 
         {/* Contenedor para las tarjetas, centrado y con distancias ajustadas */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-12 max-w-4xl w-full mx-auto">

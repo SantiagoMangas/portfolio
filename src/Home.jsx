@@ -5,7 +5,7 @@ import Projects from './Projects';
 
 const Home = () => {
   return (
-  <div>
+    <div>
       <Hero />
       <Division />
       <Projects />

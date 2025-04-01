@@ -13,10 +13,9 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden bg-white py-16 md:py-24 lg:py-32">
-      {/* Elementos decorativos de fondo */}
-      <div className="absolute top-0 right-0 -mt-24 -mr-24 w-80 h-80 rounded-full bg-[#73BBA3]/40 blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-0 left-0 -mb-24 -ml-24 w-80 h-80 rounded-full bg-[#F0A04B]/30 blur-3xl pointer-events-none"></div>
+    <section className="relative overflow-hidden bg-[#fdffc9] dark:bg-black py-16 md:py-24 lg:py-32">
+      <div className="absolute top-0 right-0 -mt-24 -mr-24 w-80 h-80 rounded-full bg-[#73BBA3]/70 dark:bg-[#73BBA3]/70 blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 -mb-24 -ml-24 w-80 h-80 rounded-full bg-[#F0A04B]/60 dark:bg-[#F0A04B]/50 blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 relative z-10">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
@@ -31,13 +30,13 @@ export default function Hero() {
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="inline-block -rotate-2 rounded-full bg-[#EF9651]/80 backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-[#443627] shadow-sm"
+              className="inline-block -rotate-2 rounded-full bg-[#EF9651]/80 backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-[#443627] dark:text-black shadow-sm"
             >
               ¡Bienvenido a mi Portafolio!
             </motion.div>
 
             <motion.h1
-              className="text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-black mt-4 mb-4"
+              className="text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-black dark:text-white mt-4 mb-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -63,7 +62,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.h2
-              className="text-2xl md:text-3xl font-semibold text-[#73BBA3] mb-4"
+              className="text-2xl md:text-3xl font-semibold text-[#73BBA3]  dark:text-[#B4E380] mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
@@ -72,7 +71,7 @@ export default function Hero() {
             </motion.h2>
 
             <motion.p
-              className="text-xl text-[#EF9651] mb-3"
+              className="text-xl text-[#EF9651] dark:text-[#F6FB7A] mb-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
@@ -81,7 +80,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.p
-              className="text-lg text-black/70 max-w-xl mx-auto lg:mx-0 mb-8"
+              className="text-lg text-black/70 dark:text-white/80 max-w-xl mx-auto lg:mx-0 mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
@@ -98,10 +97,9 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.8 }}
             >
               <ContactButton />
-
               <motion.a
                 href="/projects"
-                className="group flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[#73BBA3] text-[#73BBA3] font-medium hover:bg-[#73BBA3]/10 transition-all duration-300"
+                className="group flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[#73BBA3] text-[#73BBA3] dark:border-[#B4E380] dark:text-[#B4E380] font-medium hover:bg-[#73BBA3]/10 transition-all duration-300"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -124,7 +122,7 @@ export default function Hero() {
 
           {/* Columna de imagen y tecnologías */}
           <motion.div
-            className="w-full sm:w-1/3 md:w-1/3 lg:w-1/2 flex justify-center"
+            className="sm:w-1/3 md:w-1/2 lg:w-1/2 flex justify-center"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.9 }}
             transition={{ duration: 0.7, delay: 0.4 }}
@@ -160,7 +158,7 @@ export default function Hero() {
                 transition={{ delay: 1, duration: 0.5 }}
                 whileHover={{ scale: 1.1, rotate: 10 }}
               >
-                <Code className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                <Code className="h-5 w-5 sm:h-6 sm:w-6 text-black dark:text-white" />
               </motion.div>
 
               <motion.div
@@ -170,17 +168,17 @@ export default function Hero() {
                 transition={{ delay: 1.2, duration: 0.5 }}
                 whileHover={{ scale: 1.1, rotate: -10 }}
               >
-                <Layers className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                <Layers className="h-5 w-5 sm:h-6 sm:w-6 text-black dark:text-white" />
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-2 right-1/4 flex items-center justify-center h-12 w-12 sm:h-14 sm:w-14 rounded-full bg-[#9333EA]/70 shadow-lg"
+                className="absolute -bottom-2 right-1/4 flex items-center justify-center h-12 w-12 sm:h-14 sm:w-14 rounded-full bg-[#F6FB7A]/70 shadow-lg"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 1.4, duration: 0.5 }}
                 whileHover={{ scale: 1.1, rotate: 5 }}
               >
-                <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-black dark:text-white" />
               </motion.div>
             </div>
           </motion.div>

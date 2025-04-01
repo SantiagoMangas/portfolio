@@ -1,26 +1,26 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react"
+import { useTheme } from "next-themes"
 
-const Switch = () => {
-  const [isDark, setIsDark] = useState(false);
+export default function ThemeToggle() {
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
 
+  // Avoid hydration mismatch by only rendering after component is mounted
   useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-      setIsDark(true);
-    }
-  }, []);
+    setMounted(true)
+  }, [])
 
-  const toggleTheme = () => {
-    const newTheme = isDark ? "light" : "dark";
-    document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", newTheme);
-    setIsDark(!isDark);
-  };
+  if (!mounted) return null
 
   return (
     <label className="relative inline-flex items-center cursor-pointer">
-      <input type="checkbox" className="sr-only peer" checked={isDark} onChange={toggleTheme} />
+      <input
+        type="checkbox"
+        value=""
+        className="sr-only peer"
+        checked={theme === "dark"}
+        onChange={() => setTheme(theme === "dark" ? "light" : "dark")}
+      />
       <div className="w-14 h-7 bg-[#73BBA3] dark:bg-[#1E1E1E] rounded-full peer peer-checked:after:translate-x-7 peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all flex items-center justify-between px-1.5">
         <svg aria-label="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-4 w-4 text-white">
           <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="none" stroke="currentColor">
@@ -43,7 +43,5 @@ const Switch = () => {
         </svg>
       </div>
     </label>
-  );
-};
-
-export default Switch;
+  )
+}
