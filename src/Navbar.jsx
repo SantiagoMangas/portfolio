@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import Switch from "./Switch"
+import Switch from "./buttons/Switch"
 import { Home, Phone, Info, Briefcase } from "lucide-react"
 
 const Navbar = () => {
@@ -30,7 +30,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div className="navbar bg-[#B4E380] dark:bg-[#222E2A] flex justify-between items-center h-20 px-4 text-black dark:text-white shadow-sm dark:shadow-[#1E1E1E]/20 z-50 relative transition-colors duration-300">
+    <div className="navbar bg-theme_light_green dark:bg-theme_dark_green flex justify-between items-center h-20 px-4 text-black dark:text-white shadow-sm dark:shadow-[#1E1E1E]/20 z-50 relative transition-colors duration-300">
       <h1 className="w-full text-3xl font-bold transition-colors duration-300">Mangas</h1>
 
       {/* Desktop Menu */}
@@ -40,7 +40,7 @@ const Navbar = () => {
             <li
               key={item.id}
               className="flex items-center justify-center whitespace-nowrap 
-              hover:bg-[#73BBA3] dark:hover:bg-[#395D4D]
+              hover:bg-theme_teal dark:hover:bg-[#395D4D]
               rounded-xl m-2 cursor-pointer transition-colors duration-300"
             >
               <Link to={item.path} className="block w-full h-full p-4 dark:text-white transition-colors duration-300">
@@ -58,7 +58,7 @@ const Navbar = () => {
       <div className="lg:hidden flex items-center">
         <button
           onClick={handleNav}
-          className="relative w-10 h-10 flex justify-center items-center rounded-full hover:bg-[#73BBA3] dark:hover:bg-[#395D4D] transition-colors duration-300"
+          className="relative w-10 h-10 flex justify-center items-center rounded-full hover:bg-theme_teal dark:hover:bg-[#395D4D] transition-colors duration-300"
           aria-label={nav ? "Cerrar menú" : "Abrir menú"}
         >
           <div className="block w-5 absolute">
@@ -95,7 +95,7 @@ const Navbar = () => {
           mobile-menu
           fixed lg:hidden left-0 top-0 w-[70%] h-full z-50
           border-r border-r-gray-300 dark:border-r-[#395D4D]
-          bg-[#B4E380] dark:bg-[#222E2A]
+          bg-theme_light_green dark:bg-theme_dark_green
           text-black dark:text-white
           shadow-2xl
           transition-all duration-300 ease-in-out
@@ -107,7 +107,7 @@ const Navbar = () => {
           <h1 className="text-2xl font-bold dark:text-white transition-colors duration-300">Mangas.</h1>
           <button
             onClick={handleNav}
-            className="p-2 rounded-full hover:bg-[#73BBA3] dark:hover:bg-[#395D4D] transition-colors duration-300"
+            className="p-2 rounded-full hover:bg-theme_teal dark:hover:bg-[#395D4D] transition-colors duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -122,12 +122,12 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation Items */}
-        <div className="bg-[#B4E380] dark:bg-[#222E2A] p-4 flex-grow transition-colors duration-300">
+        <div className="bg-theme_light_green dark:bg-theme_dark_green p-4 flex-grow transition-colors duration-300">
           <ul className="space-y-2">
             {navItems.map((item) => (
               <li
                 key={item.id}
-                className="p-2 rounded-lg hover:bg-[#73BBA3] dark:hover:bg-[#395D4D]
+                className="p-2 rounded-lg hover:bg-theme_teal dark:hover:bg-[#395D4D]
                 transition-colors duration-300 cursor-pointer"
               >
                 <Link to={item.path} onClick={handleNav} className="flex w-full h-full p-2 space-x-2">
