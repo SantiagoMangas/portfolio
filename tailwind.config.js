@@ -15,6 +15,7 @@ export default {
         theme_teal: "#73BBA3",          // Verde azulado
         theme_dark_green: "#222E2A",    // Verde oscuro
         theme_light_orange: '#EF9651',  // Naranja suave
+        theme_light_brown: '#443627', // Marrón claro
       },
     },
   },

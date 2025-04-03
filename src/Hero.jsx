@@ -30,13 +30,13 @@ export default function Hero() {
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="inline-block -rotate-2 rounded-full bg-theme_light_orange/80 backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-[#443627] dark:text-black shadow-sm"
+              className="inline-block -rotate-2 rounded-full bg-theme_light_orange/80 backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-theme_light_brown dark:text-black shadow-sm"
             >
               ¡Bienvenido a mi Portafolio!
             </motion.div>
 
             <motion.h1
-              className="text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-black dark:text-white mt-4 mb-4"
+              className="text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-theme_light_brown dark:text-white mt-4 mb-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -130,7 +130,7 @@ export default function Hero() {
             <div className="relative w-full max-w-sm">
               {/* Tarjeta principal con imagen */}
               <motion.div
-                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 p-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden border border-gray-100 p-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
                 whileHover={{ y: -5 }}
               >
                 <div className="relative overflow-hidden rounded-xl aspect-square">
@@ -145,8 +145,8 @@ export default function Hero() {
                 </div>
 
                 <div className="text-center p-3">
-                  <h3 className="font-semibold text-black">Programador</h3>
-                  <p className="text-sm text-black/70">Sumando experiencia!</p>
+                  <h3 className="font-semibold text-black dark:text-white">Programador</h3>
+                  <p className="text-sm text-black/70 dark:text-theme_light_yellow">Sumando experiencia!</p>
                 </div>
               </motion.div>
 
