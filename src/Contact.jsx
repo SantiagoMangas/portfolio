@@ -1,10 +1,12 @@
 import React from 'react';
+import Form from './Form';
+import ContactRedes from './ContactRedes';
 
 function Contact() {
   return (
     <div>
-      <h1>Contacto</h1>
-      <p>Aquí puedes poner tu formulario de contacto.</p>
+      <Form />
+      <ContactRedes />
     </div>
   );
 }

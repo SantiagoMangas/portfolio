@@ -130,7 +130,7 @@ export default function Hero() {
             <div className="relative w-full max-w-sm">
               {/* Tarjeta principal con imagen */}
               <motion.div
-                className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden border border-gray-100 p-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden border border-gray-100 p-3 transition-all duration-100 hover:-translate-y-1 hover:shadow-2xl"
                 whileHover={{ y: -5 }}
               >
                 <div className="relative overflow-hidden rounded-xl aspect-square">

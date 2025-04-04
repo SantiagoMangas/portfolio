@@ -3,7 +3,7 @@ import TecCard from './cards/CardTec'
 import CardCV from './cards/CardCV'
 import CardUIUX from './cards/CardUIUX'
 
-export default function Example() {
+export default function Tecnologias() {
     return (
       <div className="bg-theme_light_fond dark:bg-black py-24 sm:py-32">
         <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
