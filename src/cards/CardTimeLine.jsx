@@ -7,7 +7,7 @@ function CardTimeLine() {
     {
       title: "Técnico Universitario en Programación",
       date: "2023 - 2024",
-      description: "Tecnicatura de 2 años de la Universidad Tecnológica Nacional - Bahía Blanca.",
+      description: "Tecnicatura de 2 años Full Stack | UTN Bahía Blanca.",
       link: "/certificados/titulo-tecnico.pdf",
       linkText: "Ver certificado",
       badge: "Actual",
@@ -35,7 +35,7 @@ function CardTimeLine() {
     {
       title: "Certificado de Inglés",
       date: "2022",
-      description: "Nivel B2 - Upper Intermediate Programa de Certificación de Competencias en Lengua Extranjera UTN Bahía Blanca.",
+      description: "Nivel B2 - Upper Intermediate Programa de Certificación de Competencias en Lengua Extranjera | UTN Bahía Blanca.",
       link: "/certificados/certificado-ingles.pdf",
       linkText: "Ver certificado",
       badge: null,
@@ -64,7 +64,7 @@ function CardTimeLine() {
       <h3 className="flex items-center flex-wrap mb-2 text-xl font-semibold text-gray-900 dark:text-white">
         {item.title}
         {item.badge && (
-          <span className="bg-theme_light_green text-theme_dark_green text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-theme_mid_green ms-3 mt-1 md:mt-0">
+          <span className="bg-theme_light_green text-theme_dark_green text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-theme_mid_green lg:ms-3 mt-1 md:mt-0 md:ms-0">
             {item.badge}
           </span>
         )}
@@ -106,7 +106,6 @@ function CardTimeLine() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-      {/* Columna de Educación */}
       <div>
         <motion.h3
           className="text-2xl font-bold mb-6 text-theme_light_brown dark:text-white text-center md:text-left"
@@ -121,7 +120,6 @@ function CardTimeLine() {
         </ol>
       </div>
 
-      {/* Columna de Certificados */}
       <div>
         <motion.h3
           className="text-2xl font-bold mb-6 text-theme_light_brown dark:text-white text-center md:text-left"
