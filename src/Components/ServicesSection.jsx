@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import ServiceCard from "./ServiceCard"
+import CardServices from "../cards/CardServices"
 
 function ServicesSection() {
   const services = [
@@ -140,7 +140,7 @@ function ServicesSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, index) => (
-          <ServiceCard
+          <CardServices
             key={index}
             title={service.title}
             description={service.description}

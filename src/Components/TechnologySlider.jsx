@@ -31,7 +31,7 @@ function TechnologySlider() {
               onClick={() => setActiveTab(tab.id)}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                 activeTab === tab.id
-                  ? "bg-[#F6FB7A] text-black dark:bg-[#88D66C] dark:text-white shadow-sm"
+                  ? "bg-theme_light_green text-black dark:bg-theme_teal dark:text-white shadow-sm"
                   : "text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
               }`}
             >

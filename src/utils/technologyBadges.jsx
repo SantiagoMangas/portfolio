@@ -9,7 +9,6 @@ import {
     FaServer,
     FaDocker,
     FaNpm,
-    FaFigma,
     FaGitAlt,
     FaCode,
   } from "react-icons/fa"
@@ -17,7 +16,6 @@ import {
     SiTailwindcss,
     SiExpress,
     SiMongodb,
-    SiPostgresql,
     SiMysql,
     SiTypescript,
     SiNextdotjs,
@@ -38,13 +36,11 @@ import {
     FaServer,
     FaDocker,
     FaNpm,
-    FaFigma,
     FaGitAlt,
     FaCode,
     SiTailwindcss,
     SiExpress,
     SiMongodb,
-    SiPostgresql,
     SiMysql,
     SiTypescript,
     SiNextdotjs,
@@ -126,13 +122,6 @@ import {
             MongoDB
           </span>
         )
-      case "PostgreSQL":
-        return (
-          <span className="flex items-center px-3 py-1 text-xs font-medium rounded-full text-white bg-[#336791]">
-            <SiPostgresql className="mr-1" />
-            PostgreSQL
-          </span>
-        )
       case "MySQL":
         return (
           <span className="flex items-center px-3 py-1 text-xs font-medium rounded-full text-white bg-[#4479A1]">
@@ -152,13 +141,6 @@ import {
           <span className="flex items-center px-3 py-1 text-xs font-medium rounded-full text-white bg-[#E535AB]">
             <FaDatabase className="mr-1" />
             GraphQL
-          </span>
-        )
-      case "Firebase":
-        return (
-          <span className="flex items-center px-3 py-1 text-xs font-medium rounded-full text-white bg-[#FFCA28]">
-            <FaDatabase className="mr-1" />
-            Firebase
           </span>
         )
       case "Git":
@@ -182,20 +164,6 @@ import {
             VS Code
           </span>
         )
-      case "Figma":
-        return (
-          <span className="flex items-center px-3 py-1 text-xs font-medium rounded-full text-white bg-[#F24E1E]">
-            <FaFigma className="mr-1" />
-            Figma
-          </span>
-        )
-      case "Docker":
-        return (
-          <span className="flex items-center px-3 py-1 text-xs font-medium rounded-full text-white bg-[#2496ED]">
-            <FaDocker className="mr-1" />
-            Docker
-          </span>
-        )
       case "NPM":
         return (
           <span className="flex items-center px-3 py-1 text-xs font-medium rounded-full text-white bg-[#CB3837]">
@@ -217,13 +185,6 @@ import {
             Vite
           </span>
         )
-      case "Webpack":
-        return (
-          <span className="flex items-center px-3 py-1 text-xs font-medium rounded-full text-white bg-[#8DD6F9]">
-            <FaJs className="mr-1" />
-            Webpack
-          </span>
-        )
       default:
         return (
           <span className="flex items-center px-3 py-1 text-xs font-medium rounded-full text-white bg-gray-500">
@@ -236,7 +197,7 @@ import {
   // Lista de tecnologías por categoría
   export const technologiesByCategory = {
     frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind", "TypeScript", "Next.js", "Vite"],
-    backend: ["Node.js", "Express", "MongoDB", "PostgreSQL", "MySQL", "REST API", "GraphQL", "Firebase"],
-    tools: ["Git", "GitHub", "VS Code", "Figma", "Docker", "NPM", "Postman", "Webpack"],
+    backend: ["Node.js", "Express", "MongoDB", "MySQL", "REST API", "GraphQL"],
+    tools: ["Git", "GitHub", "VS Code", "NPM", "Postman"],
   }
   
