@@ -1,6 +1,6 @@
 import React from 'react';
-import Form from './Form';
-import ContactRedes from './ContactRedes';
+import Form from '../Components/Form';
+import ContactRedes from '../Components/ContactRedes';
 
 function Contact() {
   return (

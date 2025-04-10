@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { HiMail } from "react-icons/hi"
-import SocialButton from "./buttons/SocialButton"
+import SocialButton from "../buttons/SocialButton"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()

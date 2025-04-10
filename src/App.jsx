@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Navbar';
-import Home from './Home';
-import Contact from './Contact';
-import  About from './About';
-import Projects from './Projects';
-import Footer from './Footer';
+import Navbar from './Components/Navbar';
+import Home from './Pages/Home';
+import Contact from './Pages/Contact';
+import  About from './Pages/About';
+import Projects from './Pages/Projects';
+import Footer from './Components/Footer';
 
 const App = () => {
   return (

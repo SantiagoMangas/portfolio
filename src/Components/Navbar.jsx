@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
-import Switch from "./buttons/Switch"
+import Switch from "../buttons/Switch"
 import { Home, Phone, Info, Briefcase } from "lucide-react"
 
 const Navbar = () => {

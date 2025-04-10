@@ -1,6 +1,6 @@
 import React from 'react';
-import CardProjects from "./cards/CardProjects"
-import comingSoon from "./assets/images/comingSoon.jpg"
+import CardProjects from "../cards/CardProjects"
+import comingSoon from "../assets/images/comingSoon.jpg"
 
 function Projects() {
   return (

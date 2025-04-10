@@ -1,7 +1,7 @@
 import React from 'react'
-import TecCard from './cards/CardTec'
-import CardCV from './cards/CardCV'
-import CardUIUX from './cards/CardUIUX'
+import TecCard from '../cards/CardTec'
+import CardCV from '../cards/CardCV'
+import CardUIUX from '../cards/CardUIUX'
 
 export default function Tecnologias() {
     return (
