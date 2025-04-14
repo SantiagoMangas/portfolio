@@ -47,16 +47,14 @@ const Form = () => {
         transition={{ duration: 0.5 }}
         className="relative bg-theme_light_brown/10 dark:bg-gray-900 px-6 py-4 rounded-lg shadow-lg dark:shadow-theme_teal/40 text-center max-w-2xl mb-8"
         >
-        <p className="text-lg md:text-xl font-semibold text-theme_light_brown dark:text-gray-200">
-            ✨ ¡Me encantaría saber de vos!  
-            Si tenés una idea, una pregunta o simplemente querés charlar,  
-            escribime por acá o en mis redes. 📩  
-        </p>
+    <p className="text-lg md:text-xl font-semibold text-theme_light_brown dark:text-gray-200 max-w-xl mx-auto text-center leading-relaxed">
+      ¿Tenés un proyecto en mente o querés contactarme? Completá el formulario y estaré encantado de responderte. También podés escribirme por mis redes. 📩
+    </p>
         </motion.div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full bg-white dark:bg-gray-900 p-8 rounded-lg shadow-md dark:shadow-theme_teal/40">
         {/* Formulario */}
-        <form onSubmit={onSubmit} className="w-full max-w-lg text-gray-800 dark:text-white">
+        <form onSubmit={onSubmit} className="w-full md:max-w-lg text-gray-800 dark:text-white">
         <motion.h2
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}

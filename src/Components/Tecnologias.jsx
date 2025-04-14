@@ -16,10 +16,10 @@ export default function Tecnologias() {
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
                 <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                   <p className="mt-2 text-lg font-medium tracking-tight text-theme_light_brown dark:text-white max-lg:text-center">
-                    Mobile friendly
+                  💡 No solo sé frontend...
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400 max-lg:text-center">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+                  También me muevo con otras herramientas y tecnologías que complementan mi perfil!                  
                   </p>
                 </div>
                 <TecCard />
@@ -47,7 +47,7 @@ export default function Tecnologias() {
                     Desarrollo de APIs eficientes y seguras
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400 max-lg:text-center">
-                    Diseño y desarrollo de APIs eficientes, seguras y optimizadas para alto rendimiento.
+                    Desarrollo interfaces robustas que conectan tus sistemas de forma eficiente, cuidando el rendimiento y la seguridad desde el inicio.
                   </p>
                 </div>
 
