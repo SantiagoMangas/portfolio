@@ -41,33 +41,35 @@ function ContactRedes() {
           Contacto
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mx-auto">
           {contactMethods.map((method, index) => (
-            <div key={index} className="w-full flex">
-              <CardServices
-                title={method.title}
-                description={
-                  <div className="flex flex-col">
-                    <p className="mb-2">{method.description}</p>
-                    <a 
-                      href={method.link}
-                      target={method.link.startsWith('mailto:') ? '_self' : '_blank'} 
-                      rel={method.link.startsWith('mailto:') ? '' : 'noopener noreferrer'}
-                      className="text-theme_light_brown dark:text-theme_teal font-medium hover:underline inline-block"
-                    >
-                      {method.linkText}
-                    </a>
-                  </div>
-                }
-                icon={method.icon}
-                delay={index * 0.1}
-              />
+            <div key={index} className="flex justify-center w-full h-full">
+              <div className="w-full">
+                <CardServices
+                  title={method.title}
+                  description={
+                    <>
+                      <span className="block mb-2">{method.description}</span>
+                      <a
+                        href={method.link}
+                        target={method.link.startsWith("mailto:") ? "_self" : "_blank"}
+                        rel={method.link.startsWith("mailto:") ? "" : "noopener noreferrer"}
+                        className="text-theme_light_brown dark:text-theme_teal font-medium hover:underline inline-block"
+                      >
+                        {method.linkText}
+                      </a>
+                    </>
+                  }
+                  icon={method.icon}
+                  delay={index * 0.1}
+                />
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 export default ContactRedes;

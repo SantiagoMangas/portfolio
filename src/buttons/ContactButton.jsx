@@ -1,7 +1,9 @@
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 
 const ContactButton = () => {
   return (
+    <Link to="/contact">
     <motion.button
       className="cursor-pointer group relative bg-[#F97316] hover:bg-[#73BBA3] text-black font-semibold text-sm px-6 py-3 rounded-full transition-all duration-200 ease-in-out shadow hover:shadow-lg w-40 h-12 overflow-hidden"
       whileHover={{ scale: 1.03 }}
@@ -23,6 +25,7 @@ const ContactButton = () => {
         </svg>
       </div>
     </motion.button>
+    </Link>
   )
 }
 

@@ -20,7 +20,7 @@ function HeroAbout() {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-theme_light_brown dark:text-white mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
           >
             Sobre mí
           </motion.h1>
@@ -29,7 +29,7 @@ function HeroAbout() {
             className="text-lg md:text-xl text-black/80 dark:text-white/90 leading-relaxed max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
           >
             <p className="mb-1">
               Profesional comprometido con sólidos conocimientos en desarrollo web, tanto front-end como back-end.
