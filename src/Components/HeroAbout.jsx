@@ -31,13 +31,11 @@ function HeroAbout() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
           >
-            <p className="mb-1">
+            <p className="mb-1 text-balance">
               Profesional comprometido con sólidos conocimientos en desarrollo web, tanto front-end como back-end.
             </p>
-            <p>
-              Tengo la capacidad de trabajar en equipo y estoy siempre dispuesto a aprender y adaptarme a nuevas
-              tecnologías. Mi enfoque es lograr resultados eficientes y aportar valor en cada proyecto en el que
-              participo.
+            <p className="text-balance">
+              Tengo la capacidad de trabajar en equipo y siempre dispuesto a aprender y adaptarme. Mi enfoque es lograr resultados eficientes y aportar valor en cada proyecto en el que participo.
             </p>
           </motion.div>
         </div>

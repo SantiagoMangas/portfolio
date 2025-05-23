@@ -50,14 +50,14 @@ export default function ProjectGrid({ projects }) {
   return (
     <div className="space-y-8">
       {/* Filtros de categorías con scroll horizontal en móvil */}
-      <div className="overflow-x-auto pb-2 -mx-4 px-4 md:overflow-visible md:pb-0 md:mx-0 md:px-0">
+      <div className="flex justify-center overflow-x-auto pb-2 -mx-4 px-4 md:overflow-visible md:pb-0 md:mx-0 md:px-0">
         <div className="flex gap-2 mb-6 w-max md:w-auto md:flex-wrap">
           <button
             onClick={() => setSelectedTag(null)}
             className={`rounded-full whitespace-nowrap px-4 py-2 text-sm font-medium ${
               selectedTag === null
-                ? "bg-blue-600 text-white hover:bg-blue-700"
-                : "bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
+                ? "bg-theme_teal text-white"
+                : "bg-theme_teal text-gray-800 hover:bg-theme_mid_green dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
             } transition-colors`}
           >
             Todos
@@ -68,8 +68,8 @@ export default function ProjectGrid({ projects }) {
               onClick={() => setSelectedTag(tag)}
               className={`rounded-full whitespace-nowrap px-4 py-2 text-sm font-medium ${
                 selectedTag === tag
-                  ? "bg-blue-600 text-white hover:bg-blue-700"
-                  : "bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
+                  ? "bg-theme_light_orange text-white hover:bg-theme_light_brown dark:bg-theme_teal"
+                  : "bg-theme_teal text-gray-800 hover:bg-theme_mid_green dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
               } transition-colors`}
             >
               {tag}

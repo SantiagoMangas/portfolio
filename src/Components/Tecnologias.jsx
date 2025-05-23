@@ -22,7 +22,9 @@ export default function Tecnologias() {
                   También me muevo con otras herramientas y tecnologías que complementan mi perfil!                  
                   </p>
                 </div>
-                <TecCard />
+                <div className="flex-1 overflow-y-auto pt-4 pb-8 sm:px-10 sm:pb-10">
+                  <TecCard />
+                </div>
               </div>
               <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 dark:ring-white/10 lg:rounded-l-[2rem]"></div>
             </div>
@@ -46,7 +48,7 @@ export default function Tecnologias() {
                   <p className="mt-2 text-lg font-medium tracking-tight text-theme_light_brown dark:text-white max-lg:text-center">
                     Desarrollo de APIs eficientes y seguras
                   </p>
-                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400 max-lg:text-center">
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 dark:text-gray-400 max-lg:text-center text-balance">
                     Desarrollo interfaces robustas que conectan tus sistemas de forma eficiente, cuidando el rendimiento y la seguridad desde el inicio.
                   </p>
                 </div>

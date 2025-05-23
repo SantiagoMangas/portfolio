@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import Switch from "../buttons/Switch"
 import { Home, Phone, Info, Briefcase } from "lucide-react"
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
+  const location = useLocation() // Get current location/path
 
   const handleNav = () => {
     setNav(!nav)
@@ -29,6 +30,16 @@ const Navbar = () => {
     { id: 4, text: "Sobre mi", path: "/about", icon: <Info size={20} /> },
   ]
 
+  // Check if a nav item is active
+  const isActive = (path) => {
+    // For home page, check exact match
+    if (path === "/") {
+      return location.pathname === "/"
+    }
+    // For other pages, check if the current path starts with the nav item path
+    return location.pathname.startsWith(path)
+  }
+
   return (
     <div className="navbar bg-theme_light_green dark:bg-theme_dark_green flex justify-between items-center h-20 px-4 text-black dark:text-white shadow-sm dark:shadow-[#1E1E1E]/20 z-50 relative transition-colors duration-300">
       <h1 className="w-full text-3xl font-bold transition-colors duration-300">Mangas</h1>
@@ -39,9 +50,13 @@ const Navbar = () => {
           {navItems.map((item) => (
             <li
               key={item.id}
-              className="flex items-center justify-center whitespace-nowrap 
-              hover:bg-theme_teal dark:hover:bg-[#395D4D]
-              rounded-xl m-2 cursor-pointer transition-colors duration-300"
+              className={`flex items-center justify-center whitespace-nowrap 
+              ${
+                isActive(item.path)
+                  ? "bg-theme_teal dark:bg-[#395D4D]"
+                  : "hover:bg-theme_teal dark:hover:bg-[#395D4D]"
+              }
+              rounded-xl m-2 cursor-pointer transition-colors duration-300`}
             >
               <Link to={item.path} className="block w-full h-full p-4 dark:text-white transition-colors duration-300">
                 {item.text}
@@ -127,8 +142,11 @@ const Navbar = () => {
             {navItems.map((item) => (
               <li
                 key={item.id}
-                className="p-2 rounded-lg hover:bg-theme_teal dark:hover:bg-[#395D4D]
-                transition-colors duration-300 cursor-pointer"
+                className={`p-2 rounded-lg ${
+                  isActive(item.path)
+                    ? "bg-theme_teal dark:bg-[#395D4D] font-bold"
+                    : "hover:bg-theme_teal dark:hover:bg-[#395D4D]"
+                } transition-colors duration-300 cursor-pointer`}
               >
                 <Link to={item.path} onClick={handleNav} className="flex w-full h-full p-2 space-x-2">
                   {item.icon}

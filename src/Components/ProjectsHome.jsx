@@ -62,8 +62,6 @@ function Projects() {
           </div>
         </div>
       </div>
-
-      {/* Botón "Ver Más" (visible solo en desktop) */}
       <div className="hidden md:block mt-12">
         <VerProjects />
       </div>
