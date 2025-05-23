@@ -5,11 +5,11 @@ import Division from '../Components/Division';
 
 function Contact() {
   return (
-    <div>
+    <>
       <Form />
       <Division />
       <ContactRedes />
-    </div>
+    </>
   );
 }
 

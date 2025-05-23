@@ -2,7 +2,15 @@ import { renderTechnologyBadges } from "../utils/technologyBadges"
 import { FaGithub } from "react-icons/fa"
 import { FiExternalLink } from "react-icons/fi"
 
-const CardProjects = ({ title, description, technologies, imageUrl, githubLink, liveLink }) => {
+const CardProjects = ({
+  title,
+  description,
+  technologies,
+  imageUrl,
+  githubLink,
+  liveLink,
+  renderTechnologiesContent,
+}) => {
   return (
     <div className="relative flex w-80 flex-col rounded-xl border-2 border-[#F0A04B] dark:border-theme_light_green bg-white dark:bg-gray-900 shadow-lg shadow-yellow-500 dark:shadow-gray-800 transition-all hover:shadow-yellow-600 dark:hover:shadow-gray-600">
       <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 ">
@@ -13,9 +21,10 @@ const CardProjects = ({ title, description, technologies, imageUrl, githubLink, 
         <p className="text-base text-gray-600 dark:text-gray-300">{description}</p>
       </div>
       <div className="p-6 pb-3 pt-0 flex flex-wrap gap-2">
-        {technologies.map((tech) => (
-          <div key={tech}>{renderTechnologyBadges(tech)}</div>
-        ))}
+        {/* Renderizar tecnologías de forma personalizada o por defecto */}
+        {renderTechnologiesContent
+          ? renderTechnologiesContent()
+          : technologies.map((tech) => <div key={tech}>{renderTechnologyBadges(tech)}</div>)}
       </div>
       <div className="p-6 pt-0 flex justify-between">
         <a

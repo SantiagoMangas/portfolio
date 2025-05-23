@@ -1,18 +1,18 @@
 import React from 'react';
 import Hero from '../Components/Hero';
 import Division from '../Components/Division';
-import Projects from './Projects';
+import ProjectsHome from '../Components/ProjectsHome';
 import Tecnologias from '../Components/Tecnologias';
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Hero />
       <Division />
-      <Projects />
+      <ProjectsHome />
       <Division />
       <Tecnologias />
-    </div>
+    </>
   );
 };
 
