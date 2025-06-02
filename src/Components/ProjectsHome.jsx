@@ -1,5 +1,5 @@
 import CardProjects from "../cards/CardProjects"
-import comingSoon from "../assets/images/comingSoon.jpg"
+import comingSoon from "/images/comingSoon.jpg"
 import VerProjects from "../buttons/VerProjects"
 
 function Projects() {

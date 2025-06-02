@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import SocialButton from "../buttons/SocialButton"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import ContactButton from "../buttons/ContactButton.jsx"
-import HeroCard from "../cards/HeroCard"
+import HeroCard from "../cards/CardHero"
 import VerProjects from "../buttons/VerProjects.jsx"
 
 export default function Hero() {
