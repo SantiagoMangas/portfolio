@@ -1,12 +1,13 @@
-import React from 'react'
 import TecCard from '../cards/CardTec'
 import CardCV from '../cards/CardCV'
 import CardUIUX from '../cards/CardUIUX'
 
 export default function Tecnologias() {
     return (
-      <div className="bg-theme_light_fond dark:bg-black py-24 sm:py-32">
-        <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+      <div className="relative overflow-hidden bg-theme_light_fond dark:bg-black py-24 sm:py-32">
+      <div className="bg-[#F0A04B]/60 dark:bg-[#F0A04B]/50 absolute top-36 right-0 -mr-12 w-80 h-48 rounded-full  blur-3xl pointer-events-none"></div>
+      <div className="bg-[#73BBA3]/65 absolute top-64 2xl:top-22 left-0 -ml-24 w-80 h-80 rounded-full   blur-3xl pointer-events-none"></div>
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
           <p className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-theme_light_brown dark:text-white sm:text-5xl">
             Tecnologías y servicios que ofrezco!
           </p>

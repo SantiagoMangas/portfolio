@@ -128,8 +128,11 @@ function ServicesSection() {
   ]
 
   return (
-    <div className="w-full bg-theme_light_fond dark:bg-black">
-      <div className="pb-12 px-4 max-w-7xl mx-auto">
+    <div className="relative w-full bg-theme_light_fond dark:bg-black overflow-hidden">
+      <div className="bg-theme_light_orange/40 dark:bg-theme_light_orange/30 absolute top-36 right-0 -mr-12 w-80 h-48 rounded-full blur-3xl pointer-events-none z-0"></div>
+      <div className="bg-theme_teal/50 dark:bg-theme_teal/40 absolute top-64 2xl:top-22 left-0 -ml-24 w-80 h-80 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+      <div className="relative z-10 pb-12 px-4 max-w-7xl mx-auto">
         <motion.h2
           className="text-2xl md:text-3xl font-bold text-theme_light_brown dark:text-white mb-8 text-center"
           initial={{ opacity: 0 }}

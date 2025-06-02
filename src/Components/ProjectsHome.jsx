@@ -6,7 +6,8 @@ function Projects() {
   return (
     <section className="relative overflow-hidden bg-theme_light_fond dark:bg-black py-16 md:py-24 lg:py-32 min-h-screen flex flex-col items-center">
       {/* Fondo difuso de color verde */}
-      <div className="absolute top-0 right-0 -mt-24 -mr-24 w-80 h-60 rounded-full bg-[#73BBA3]/65 blur-3xl pointer-events-none"></div>
+      <div className="absolute top-36 right-0 -mr-12 w-80 h-48 rounded-full bg-[#73BBA3]/65 blur-3xl pointer-events-none"></div>
+      <div className="absolute top-64 2xl:top-22 left-0 -ml-24 w-80 h-80 rounded-full bg-[#F0A04B]/60 dark:bg-[#F0A04B]/50  blur-3xl pointer-events-none"></div>
 
       {/* Título de la sección */}
       <div className="w-full max-w-5xl px-4 mx-auto mb-12">

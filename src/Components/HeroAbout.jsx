@@ -7,6 +7,7 @@ import Division from "./Division"
 function HeroAbout() {
   return (
     <section className="bg-theme_light_fond dark:bg-black px-6 md:px-10 lg:px-20 py-20">
+      <div className="bg-[#F0A04B]/60 dark:bg-[#F0A04B]/50 absolute top-36 right-0 -mr-12 w-80 h-48 rounded-full  blur-3xl pointer-events-none z-0"></div>
       {/* Header Section with Profile */}
       <div className="flex flex-col md:flex-row items-center gap-12 mb-12 max-w-6xl mx-auto">
         <div className="w-full md:w-1/2 flex justify-center">
@@ -45,6 +46,7 @@ function HeroAbout() {
 
       {/* Trayectoria Section */}
       <div className="max-w-6xl mx-auto">
+      <div className="bg-[#73BBA3]/65 absolute bottom-0 2xl:top-22 left-0 -ml-24 w-80 h-80 rounded-full   blur-3xl pointer-events-none -z-0"></div>
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-theme_light_brown dark:text-white mb-12 text-center"
           initial={{ opacity: 0 }}

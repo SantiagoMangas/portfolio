@@ -1,7 +1,7 @@
 import { useState } from "react"
 import CardProjects from "../cards/CardProjects"
 import { motion } from "framer-motion"
-import { PlusCircle } from "lucide-react"
+import { PlusCircle, X } from "lucide-react"
 import { renderTechnologyBadges } from "../utils/technologyBadges"
 
 export default function ProjectGrid({ projects }) {
@@ -16,137 +16,138 @@ export default function ProjectGrid({ projects }) {
     ? projects.filter((project) => project.technologies.includes(selectedTag))
     : projects
 
-  // Función para mostrar etiquetas con límite en pantallas pequeñas
+  // Función mejorada para mostrar etiquetas con límite
   const renderTechnologies = (technologies, projectId) => {
     const isExpanded = expandedProjectId === projectId
-    const maxVisible = 3 // Número máximo de etiquetas visibles en pantallas pequeñas
+    const maxVisible = 3
 
-    if (technologies.length <= maxVisible || isExpanded) {
-      return technologies.map((tech) => (
-        <div key={tech} className="mb-1">
-          {renderTechnologyBadges(tech)}
-        </div>
-      ))
-    } else {
+    if (technologies.length <= maxVisible) {
       return (
-        <>
-          {technologies.slice(0, maxVisible).map((tech) => (
-            <div key={tech} className="mb-1">
+        <div className="flex flex-wrap gap-1.5">
+          {technologies.map((tech) => (
+            <div key={tech} className="transform scale-90 origin-left">
+              {renderTechnologyBadges(tech)}
+            </div>
+          ))}
+        </div>
+      )
+    }
+
+    if (isExpanded) {
+      return (
+        <div className="flex flex-wrap gap-1.5">
+          {technologies.map((tech) => (
+            <div key={tech} className="transform scale-90 origin-left">
               {renderTechnologyBadges(tech)}
             </div>
           ))}
           <button
-            onClick={() => setExpandedProjectId(projectId)}
-            className="flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-            title="Ver todas las tecnologías"
+            onClick={() => setExpandedProjectId(null)}
+            className="flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 hover:bg-red-200 dark:hover:bg-red-900/50 transition-colors"
+            title="Mostrar menos"
           >
-            <PlusCircle className="w-3 h-3" />+{technologies.length - maxVisible}
+            <X className="w-3 h-3" />
           </button>
-        </>
+        </div>
       )
     }
+
+    return (
+      <div className="flex flex-wrap gap-1.5 items-center">
+        {technologies.slice(0, maxVisible).map((tech) => (
+          <div key={tech} className="transform scale-90 origin-left">
+            {renderTechnologyBadges(tech)}
+          </div>
+        ))}
+        <button
+          onClick={() => setExpandedProjectId(projectId)}
+          className="flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full bg-theme_light_fond dark:bg-theme_dark_green text-theme_light_brown dark:text-theme_light_green hover:bg-theme_light_yellow dark:hover:bg-gray-700 transition-colors border border-theme_light_orange/30 dark:border-theme_light_green/30"
+          title="Ver todas las tecnologías"
+        >
+          <PlusCircle className="w-3 h-3" />
+          <span>+{technologies.length - maxVisible}</span>
+        </button>
+      </div>
+    )
   }
 
   return (
     <div className="space-y-8">
-      {/* Filtros de categorías con scroll horizontal en móvil */}
-      <div className="flex justify-center overflow-x-auto pb-2 -mx-4 px-4 md:overflow-visible md:pb-0 md:mx-0 md:px-0">
-        <div className="flex gap-2 mb-6 w-max md:w-auto md:flex-wrap">
-          <button
-            onClick={() => setSelectedTag(null)}
-            className={`rounded-full whitespace-nowrap px-4 py-2 text-sm font-medium ${
-              selectedTag === null
-                ? "bg-theme_teal text-white"
-                : "bg-theme_teal text-gray-800 hover:bg-theme_mid_green dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
-            } transition-colors`}
-          >
-            Todos
-          </button>
-          {allTags.map((tag) => (
-            <button
-              key={tag}
-              onClick={() => setSelectedTag(tag)}
-              className={`rounded-full whitespace-nowrap px-4 py-2 text-sm font-medium ${
-                selectedTag === tag
-                  ? "bg-theme_light_orange text-white hover:bg-theme_light_brown dark:bg-theme_teal"
-                  : "bg-theme_teal text-gray-800 hover:bg-theme_mid_green dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
-              } transition-colors`}
-            >
-              {tag}
-            </button>
-          ))}
+      <div className="relative">
+        <div className="flex justify-center">
+          <div className="inline-flex bg-theme_light_yellow dark:bg-theme_dark_green rounded-2xl p-1 overflow-x-auto max-w-full border border-theme_light_orange/20 dark:border-theme_light_green/20">
+            <div className="flex gap-1 min-w-max">
+              <button
+                onClick={() => setSelectedTag(null)}
+                className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+                  selectedTag === null
+                    ? "bg-theme_light_orange dark:bg-theme_light_green text-white shadow-md"
+                    : "text-theme_light_brown dark:text-theme_light_green hover:text-theme_light_orange dark:hover:text-white hover:bg-theme_light_yellow/50 dark:hover:bg-theme_teal/20"
+                }`}
+              >
+                Todos
+              </button>
+              {allTags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => setSelectedTag(tag)}
+                  className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+                    selectedTag === tag
+                      ? "bg-theme_light_orange dark:bg-theme_light_green text-white shadow-md"
+                      : "text-theme_light_brown dark:text-theme_light_green hover:text-theme_light_orange dark:hover:text-white hover:bg-theme_light_yellow/50 dark:hover:bg-theme_teal/20"
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Grid de proyectos */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-        {filteredProjects.map((project, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-0">
+        {filteredProjects.map((project) => (
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="w-full flex justify-center"
+            transition={{ duration: 0.3 }}
+            className="w-full"
           >
-            <CardProjectsWrapper
-              project={project}
-              renderTechnologies={() => renderTechnologies(project.technologies, project.id)}
-              isExpanded={expandedProjectId === project.id}
-              onClose={() => setExpandedProjectId(null)}
+            <CardProjects
+              title={project.title}
+              description={project.description}
+              technologies={project.technologies}
+              imageUrl={project.imageUrl}
+              githubLink={project.githubLink}
+              liveLink={project.liveLink}
+              renderTechnologiesContent={() => renderTechnologies(project.technologies, project.id)}
             />
           </motion.div>
         ))}
       </div>
 
-      {/* Mensaje cuando no hay proyectos */}
+      {/* Estado vacío con colores del tema */}
       {filteredProjects.length === 0 && (
-        <div className="text-center py-12">
-          <p className="text-gray-500 dark:text-gray-400">
-            No se encontraron proyectos con la tecnología seleccionada.
-          </p>
-        </div>
-      )}
-    </div>
-  )
-}
-
-// Componente wrapper para CardProjects que maneja la visualización de tecnologías
-function CardProjectsWrapper({ project, renderTechnologies, isExpanded, onClose }) {
-  // Este componente permite personalizar cómo se muestran las tecnologías
-  // sin modificar el componente CardProjects original
-
-  return (
-    <div className="relative">
-      <CardProjects
-        title={project.title}
-        description={project.description}
-        technologies={project.technologies}
-        imageUrl={project.imageUrl}
-        githubLink={project.githubLink}
-        liveLink={project.liveLink}
-        renderTechnologiesContent={renderTechnologies}
-      />
-
-      {isExpanded && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center" onClick={onClose}>
-          <div
-            className="bg-white dark:bg-gray-800 p-4 rounded-lg max-w-xs w-full"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h3 className="font-semibold mb-3">Tecnologías</h3>
-            <div className="flex flex-wrap gap-2">
-              {project.technologies.map((tech) => (
-                <div key={tech}>{renderTechnologyBadges(tech)}</div>
-              ))}
-            </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="text-center py-16"
+        >
+          <div className="bg-theme_light_fond dark:bg-theme_dark_green rounded-2xl p-8 max-w-md mx-auto border border-theme_light_orange/20 dark:border-theme_light_green/20">
+            <div className="text-6xl mb-4">🔍</div>
+            <h3 className="text-lg font-semibold text-theme_light_brown dark:text-white mb-2">No hay proyectos</h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              No se encontraron proyectos con la tecnología "{selectedTag}".
+            </p>
             <button
-              className="w-full mt-4 px-4 py-2 border border-gray-300 rounded-md text-sm font-medium bg-white text-gray-700 hover:bg-gray-50 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 transition-colors"
-              onClick={onClose}
+              onClick={() => setSelectedTag(null)}
+              className="px-6 py-2 bg-gradient-to-r from-theme_light_orange to-theme_light_brown dark:from-theme_light_green dark:to-theme_teal text-white rounded-xl hover:from-theme_light_brown hover:to-theme_light_orange dark:hover:from-theme_teal dark:hover:to-theme_mid_green transition-all duration-200 font-medium"
             >
-              Cerrar
+              Ver todos
             </button>
           </div>
-        </div>
+        </motion.div>
       )}
     </div>
   )

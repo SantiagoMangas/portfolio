@@ -12,39 +12,65 @@ const CardProjects = ({
   renderTechnologiesContent,
 }) => {
   return (
-    <div className="relative flex w-80 flex-col rounded-xl border-2 border-[#F0A04B] dark:border-theme_light_green bg-white dark:bg-gray-900 shadow-lg shadow-yellow-500 dark:shadow-gray-800 transition-all hover:shadow-yellow-600 dark:hover:shadow-gray-600">
-      <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 ">
-        <img src={imageUrl || "/placeholder.svg"} alt={title} className="w-full h-full object-cover rounded-xl " />
+    <div className="group relative w-full max-w-sm mx-auto bg-white dark:bg-theme_dark_green rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-theme_light_orange/30 dark:border-theme_light_green/30 hover:border-theme_light_orange dark:hover:border-theme_light_green hover:-translate-y-2">
+      {/* Imagen sin badges flotantes */}
+      <div className="relative h-48 overflow-hidden">
+        <img
+          src={imageUrl || "/placeholder.svg?height=200&width=400"}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
-      <div className="p-6 pb-3 pt-3">
-        <h5 className="mb-2 block text-xl font-semibold text-blue-gray-900 dark:text-white">{title}</h5>
-        <p className="text-base text-gray-600 dark:text-gray-300">{description}</p>
+
+      {/* Contenido */}
+      <div className="p-5">
+        {/* Título y descripción */}
+        <div className="mb-4">
+          <h3 className="text-lg font-bold text-theme_light_brown dark:text-white mb-2 line-clamp-1 group-hover:text-theme_light_orange dark:group-hover:text-theme_light_green transition-colors">
+            {title}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-2 leading-relaxed">{description}</p>
+        </div>
+
+        {/* Tecnologías - Layout horizontal compacto */}
+        <div className="mb-4">
+          <div className="flex flex-wrap gap-1.5">
+            {renderTechnologiesContent
+              ? renderTechnologiesContent()
+              : technologies.map((tech) => (
+                  <div key={tech} className="transform scale-90 origin-left">
+                    {renderTechnologyBadges(tech)}
+                  </div>
+                ))}
+          </div>
+        </div>
+
+        <div className="flex gap-3">
+          <a
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-theme_light_fond dark:bg-gray-800 text-theme_light_brown dark:text-gray-300 rounded-xl hover:bg-theme_light_yellow dark:hover:bg-gray-700 transition-all duration-200 hover:scale-105 group/btn border border-theme_light_orange/20 dark:border-theme_light_green/20"
+          >
+            <FaGithub className="text-lg group-hover/btn:rotate-12 transition-transform" />
+            <span className="text-sm font-medium">Code</span>
+          </a>
+
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-orange-500 to-orange-600 dark:from-green-500 dark:to-green-600 text-white rounded-xl hover:from-orange-600 hover:to-orange-700 dark:hover:from-green-600 dark:hover:to-green-700 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl group/btn"
+          >
+            <span className="text-sm font-medium">Live</span>
+            <FiExternalLink className="text-sm group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+          </a>
+        </div>
       </div>
-      <div className="p-6 pb-3 pt-0 flex flex-wrap gap-2">
-        {/* Renderizar tecnologías de forma personalizada o por defecto */}
-        {renderTechnologiesContent
-          ? renderTechnologiesContent()
-          : technologies.map((tech) => <div key={tech}>{renderTechnologyBadges(tech)}</div>)}
-      </div>
-      <div className="p-6 pt-0 flex justify-between">
-        <a
-          href={githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-gray-800 dark:text-gray-200 bg-[#F97316]/80 dark:bg-theme_light_green/20 rounded-xl shadow-md transition-all hover:bg-theme_light_green hover:scale-105 dark:hover:bg-theme_light_green dark:hover:text-black"
-        >
-          <FaGithub className="text-xl" />
-        </a>
-        <a
-          href={liveLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-[#73BBA3] dark:text-theme_light_green border-2 border-[#73BBA3] dark:border-theme_light_green rounded-xl shadow-md transition-all duration-50 hover:bg-[#73BBA3] hover:text-white hover:scale-105 dark:hover:bg-theme_light_green dark:hover:text-black"
-        >
-          Preview
-          <FiExternalLink />
-        </a>
-      </div>
+
+      {/* Efecto de brillo en hover */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-theme_light_yellow/10 dark:via-theme_light_green/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
     </div>
   )
 }
