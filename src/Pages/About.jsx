@@ -1,4 +1,3 @@
-import React from 'react'; 
 import HeroAbout from '../Components/HeroAbout';
 import TechnologySlider from '../Components/TechnologySlider';
 import ServicesSection from '../Components/ServicesSection';
