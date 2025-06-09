@@ -11,6 +11,7 @@ import {
   FaNpm,
   FaGitAlt,
   FaCode,
+  FaJava,
 } from "react-icons/fa"
 import {
   SiTailwindcss,
@@ -21,10 +22,13 @@ import {
   SiNextdotjs,
   SiVite,
   SiPostman,
+  SiSpringboot,
+  SiJunit5,
+  SiFlutter,
+  SiDart,
 } from "react-icons/si"
 import { VscCode } from "react-icons/vsc"
 
-// Exportamos todos los iconos para que puedan ser importados desde otros componentes
 export const TechIcons = {
   FaHtml5,
   FaCss3Alt,
@@ -38,6 +42,7 @@ export const TechIcons = {
   FaNpm,
   FaGitAlt,
   FaCode,
+  FaJava,
   SiTailwindcss,
   SiExpress,
   SiMongodb,
@@ -47,6 +52,10 @@ export const TechIcons = {
   SiVite,
   VscCode,
   SiPostman,
+  SiSpringboot,
+  SiJunit5,
+  SiFlutter,
+  SiDart,
 }
 
 // Función para renderizar los badges de tecnologías
@@ -136,13 +145,6 @@ export const renderTechnologyBadges = (tech) => {
           REST API
         </span>
       )
-    case "GraphQL":
-      return (
-        <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#E535AB] shadow-sm">
-          <FaDatabase className="mr-1.5 text-sm" />
-          GraphQL
-        </span>
-      )
     case "Git":
       return (
         <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#F05032] shadow-sm">
@@ -185,6 +187,50 @@ export const renderTechnologyBadges = (tech) => {
           Vite
         </span>
       )
+    case "Java":
+      return (
+        <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#007396] shadow-sm">
+          <FaJava className="mr-1.5 text-sm" />
+          Java
+        </span>
+      )
+    case "Spring Boot":
+      return (
+        <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#6DB33F] shadow-sm">
+          <SiSpringboot className="mr-1.5 text-sm" />
+          Spring Boot
+        </span>
+      )
+    case "JUnit":
+      return (
+        <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#25A162] shadow-sm">
+          <SiJunit5 className="mr-1.5 text-sm" />
+          JUnit
+        </span>
+      )
+    case "Maven":
+    return (
+      <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#C71A36] shadow-sm">
+        <FaCode className="mr-1.5 text-sm" /> {/* Ícono alternativo */}
+        Maven
+      </span>
+    )
+
+    case "Flutter":
+      return (
+        <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#02569B] shadow-sm">
+          <SiFlutter className="mr-1.5 text-sm" />
+          Flutter
+        </span>
+      )
+    case "Dart":
+      return (
+        <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#0175C2] shadow-sm">
+          <SiDart className="mr-1.5 text-sm" />
+          Dart
+        </span>
+      )
+
     default:
       return (
         <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-gray-500 shadow-sm">
@@ -194,9 +240,8 @@ export const renderTechnologyBadges = (tech) => {
   }
 }
 
-// Lista de tecnologías por categoría
 export const technologiesByCategory = {
-  frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind", "TypeScript", "Next.js", "Vite"],
-  backend: ["Node.js", "Express", "MongoDB", "MySQL", "REST API", "GraphQL"],
+  frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind", "TypeScript", "Next.js", "Vite", "Flutter", "Dart"],
+  backend: ["Java", "Spring Boot", "JUnit", "Maven", "Node.js", "Express", "MongoDB", "MySQL", "REST API"],
   tools: ["Git", "GitHub", "VS Code", "NPM", "Postman"],
 }
