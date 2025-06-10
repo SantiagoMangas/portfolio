@@ -1,15 +1,10 @@
-import { useNavigate } from "react-router-dom"
 import TecCard from "../cards/CardTec"
 import CardCV from "../cards/CardCV"
 import CardUIUX from "../cards/CardUIUX"
 import { ArrowRight, User } from "lucide-react" 
 
 export default function Tecnologias() {
-  const navigate = useNavigate()
-
-  const handleNavigateToAbout = () => {
-    navigate("/about")
-    // Scroll al top después de la navegación
+  const handleScrollToTop = () => {
     setTimeout(() => {
       window.scrollTo(0, 0)
     }, 100)
@@ -26,8 +21,9 @@ export default function Tecnologias() {
 
         {/* Botón para conocerme con diseño mejorado */}
         <div className="flex justify-center mt-8">
-          <button
-            onClick={handleNavigateToAbout}
+          <Link
+            to="/about"
+            onClick={handleScrollToTop}
             className="group relative inline-flex items-center justify-center overflow-hidden rounded-full px-8 py-4 font-bold transition-all duration-300 ease-out"
           >
             <span className="absolute inset-0 bg-gradient-to-br from-[#F0A04B] via-[#e88c2d] to-[#73BBA3] transition-all duration-500 ease-out group-hover:bg-gradient-to-r group-hover:from-[#73BBA3] group-hover:via-[#5da695] group-hover:to-[#F0A04B]"></span>
@@ -37,7 +33,7 @@ export default function Tecnologias() {
               <ArrowRight className="h-5 w-5 transition-all duration-300 ease-out group-hover:translate-x-1" />
             </span>
             <span className="absolute -bottom-0 left-0 h-1 w-full origin-left scale-x-0 transform bg-white transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
-          </button>
+          </Link>
         </div>
 
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
