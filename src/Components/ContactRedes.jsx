@@ -1,5 +1,5 @@
 import { FiMail } from "react-icons/fi"
-import { FaInstagram, FaLinkedin } from "react-icons/fa"
+import { FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 import { motion } from "framer-motion"
 
 function ContactRedes() {
@@ -28,6 +28,14 @@ function ContactRedes() {
       linkText: "linkedin.com/in/santiago-mangas",
       gradient: "from-blue-600 to-blue-800",
     },
+    {
+      title: "WhatsApp",
+      description: "Envíame un mensaje directo a través de WhatsApp.",
+      icon: <FaWhatsapp className="h-6 w-6" />,
+      link: "https://wa.me/542923428367",
+      linkText: "+54 2923 428367",
+      gradient: "from-green-500 to-green-600",
+    }
   ]
 
   return (
@@ -45,7 +53,7 @@ function ContactRedes() {
           Contacto
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 mx-auto">
           {contactMethods.map((method, index) => (
             <motion.div
               key={index}
