@@ -1,7 +1,7 @@
 import TecCard from "../cards/CardTec"
 import CardCV from "../cards/CardCV"
 import CardUIUX from "../cards/CardUIUX"
-import { ArrowRight, User } from "lucide-react" // Importamos íconos
+import { ArrowRight, User } from "lucide-react" 
 
 export default function Tecnologias() {
   // Función para manejar el scroll al top cuando se navega
@@ -10,7 +10,7 @@ export default function Tecnologias() {
     e.preventDefault()
 
     // Navega a la página about
-    window.location.href = "/about"
+    window.location.path = "/about"
 
     // Asegura que la página se cargue desde arriba
     window.scrollTo(0, 0)
