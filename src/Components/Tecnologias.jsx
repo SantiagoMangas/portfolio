@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import TecCard from "../cards/CardTec"
 import CardCV from "../cards/CardCV"
 import CardUIUX from "../cards/CardUIUX"
