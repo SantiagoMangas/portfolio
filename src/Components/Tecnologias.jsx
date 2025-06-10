@@ -1,19 +1,18 @@
+import { useNavigate } from "react-router-dom"
 import TecCard from "../cards/CardTec"
 import CardCV from "../cards/CardCV"
 import CardUIUX from "../cards/CardUIUX"
 import { ArrowRight, User } from "lucide-react" 
 
 export default function Tecnologias() {
-  // Función para manejar el scroll al top cuando se navega
-  const handleNavigateToAbout = (e) => {
-    // Previene el comportamiento predeterminado del enlace
-    e.preventDefault()
+  const navigate = useNavigate()
 
-    // Navega a la página about
-    window.location.path = "/about"
-
-    // Asegura que la página se cargue desde arriba
-    window.scrollTo(0, 0)
+  const handleNavigateToAbout = () => {
+    navigate("/about")
+    // Scroll al top después de la navegación
+    setTimeout(() => {
+      window.scrollTo(0, 0)
+    }, 100)
   }
 
   return (
