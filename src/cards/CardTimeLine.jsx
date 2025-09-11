@@ -5,12 +5,20 @@ function CardTimeLine() {
   // Datos de educación
   const education = [
     {
+      title: "Pasantía Profesional",
+      date: "2025 - actual",
+      description: "Pasantía de programación de IA Visual con python para la empresa de Antares Technologies",
+      link: "https://antaresautomation.com/ar/",
+      linkText: "Ver empresa",
+      badge: "Actual",
+    },
+    {
       title: "Técnico Universitario en Programación",
       date: "2023 - 2024",
       description: "Tecnicatura de 2 años Full Stack | UTN Bahía Blanca.",
       link: "",
       linkText: "Ver certificado",
-      badge: "Actual",
+      badge: null,
     },
     {
       title: "Escuela Primaria y Secundaria – Instituto Almafuerte (Puan)",
@@ -37,6 +45,14 @@ function CardTimeLine() {
       date: "2022",
       description: "Nivel B2 - Upper Intermediate Programa de Certificación de Competencias en Lengua Extranjera | UTN Bahía Blanca.",
       link: "public/Certificados/ingles.jpg",
+      linkText: "Ver certificado",
+      badge: null,
+    },
+    {
+      title: "Curso de OpenCV para visión por ordenador con Python",
+      date: "2025 (20/08)",
+      description: "Curso de Visión por Computadora y Reconocimiento Facial con Python y OpenCV en Udemy.",
+      link: "public/Certificados/OpenCVCertificado.jpg",
       linkText: "Ver certificado",
       badge: null,
     },
