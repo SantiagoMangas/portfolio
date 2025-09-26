@@ -44,7 +44,7 @@ function CardTimeLine() {
       title: "Certificado de Inglés",
       date: "2022",
       description: "Nivel B2 - Upper Intermediate Programa de Certificación de Competencias en Lengua Extranjera | UTN Bahía Blanca.",
-      link: "/Certificados/ingles.jpg",
+      link: "/Certificados/Ingles.jpg",
       linkText: "Ver certificado",
       badge: null,
     },
