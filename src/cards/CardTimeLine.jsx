@@ -36,7 +36,7 @@ function CardTimeLine() {
       title: "Diplomatura en Desarrollo Web Full Stack",
       date: "2024 (12/06 - 30/12)",
       description: "Diplomatura en Programación Web Full Stack Developer | UTN BS. AS.",
-      link: "public/Certificados/Certificados.pdf",
+      link: "/Certificados/Certificados.pdf",
       linkText: "Ver certificado",
       badge: null,
     },
@@ -44,7 +44,7 @@ function CardTimeLine() {
       title: "Certificado de Inglés",
       date: "2022",
       description: "Nivel B2 - Upper Intermediate Programa de Certificación de Competencias en Lengua Extranjera | UTN Bahía Blanca.",
-      link: "public/Certificados/ingles.jpg",
+      link: "/Certificados/ingles.jpg",
       linkText: "Ver certificado",
       badge: null,
     },
@@ -52,11 +52,11 @@ function CardTimeLine() {
       title: "Curso de OpenCV para visión por ordenador con Python",
       date: "2025 (20/08)",
       description: "Curso de Visión por Computadora y Reconocimiento Facial con Python y OpenCV en Udemy.",
-      link: "public/Certificados/OpenCVCertificado.jpg",
+      link: "/Certificados/OpenCVCertificado.jpg",
       linkText: "Ver certificado",
       badge: null,
     },
-  ]
+  ];
 
   // Función para renderizar un elemento de la línea de tiempo
   const renderTimelineItem = (item, index, isLast) => (
