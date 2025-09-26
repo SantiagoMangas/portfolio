@@ -41,14 +41,14 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     githubLink: "https://github.com/SantiagoMangas/Airbag",
     liveLink: "https://airbag-mu.vercel.app/", 
-  },
+    },
     {
-    id: "6",
-    title: "Computer Vision Internship - Antares Technologies",
-    description: "Pasantía profesional en visión por computadora. Implementación de modelos con OpenCV y técnicas de Deep Learning para reconocimiento visual en entornos de prueba.",
-    imageUrl: "/images/Antares.png", 
-    technologies: ["Python", "OpenCV", "YOLOv8"],
-    githubLink: "https://github.com/SantiagoMangas/vision-projects", 
-  },
+      id: "6",
+      title: "Computer Vision Internship - Antares Technologies",
+      description: "Pasantía profesional en visión por computadora. Implementación de modelos con OpenCV y técnicas de Deep Learning para reconocimiento visual en entornos de prueba.",
+      imageUrl: "/images/Antares.png", 
+      technologies: ["Python", "OpenCV", "YOLOv8"],
+      githubLink: "https://github.com/SantiagoMangas/vision-projects", 
+    },
   ]
   

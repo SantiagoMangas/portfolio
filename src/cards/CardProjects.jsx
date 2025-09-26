@@ -10,6 +10,7 @@ const CardProjects = ({
   githubLink,
   liveLink,
   renderTechnologiesContent,
+  renderDescriptionContent,
 }) => {
   return (
     <div className="group relative w-full max-w-sm mx-auto bg-white dark:bg-theme_dark_green rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-theme_light_orange/30 dark:border-theme_light_green/30 hover:border-theme_light_orange dark:hover:border-theme_light_green hover:-translate-y-2">
@@ -30,7 +31,15 @@ const CardProjects = ({
           <h3 className="text-lg font-bold text-theme_light_brown dark:text-white mb-2 line-clamp-1 group-hover:text-theme_light_orange dark:group-hover:text-theme_light_green transition-colors">
             {title}
           </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-2 leading-relaxed">{description}</p>
+          <div className="text-sm leading-relaxed">
+            {renderDescriptionContent ? (
+              renderDescriptionContent()
+            ) : (
+              <p className="text-gray-600 dark:text-gray-300 line-clamp-2">
+                {description}
+              </p>
+            )}
+          </div>
         </div>
 
         {/* Tecnologías - Layout horizontal compacto */}

@@ -7,6 +7,7 @@ import { renderTechnologyBadges } from "../utils/technologyBadges"
 export default function ProjectGrid({ projects }) {
   const [selectedTag, setSelectedTag] = useState(null)
   const [expandedProjectId, setExpandedProjectId] = useState(null)
+  const [expandedDescriptionId, setExpandedDescriptionId] = useState(null)
 
   // Extraer todas las etiquetas únicas de los proyectos
   const allTags = Array.from(new Set(projects.flatMap((project) => project.technologies)))
@@ -71,6 +72,62 @@ export default function ProjectGrid({ projects }) {
     )
   }
 
+  // Función para renderizar la descripción con límite de caracteres
+  const renderDescription = (description, projectId) => {
+    const isExpanded = expandedDescriptionId === projectId
+    const maxChars = 100 // Límite de caracteres para móvil
+    const maxCharsDesktop = 130 // Límite de caracteres para desktop
+
+    // Si la descripción es corta, mostrarla completa
+    if (description.length <= maxChars) {
+      return (
+        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+          {description}
+        </p>
+      )
+    }
+
+    // Si está expandida, mostrar descripción completa con botón para colapsar
+    if (isExpanded) {
+      return (
+        <div className="space-y-2">
+          <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+            {description}
+          </p>
+          <button
+            onClick={() => setExpandedDescriptionId(null)}
+            className="flex items-center gap-1 text-xs font-medium text-theme_light_orange dark:text-theme_light_green hover:text-theme_light_brown dark:hover:text-white transition-colors"
+          >
+            <X className="w-3 h-3" />
+            Mostrar menos
+          </button>
+        </div>
+      )
+    }
+
+    // Mostrar descripción truncada con botón para expandir
+    return (
+      <div className="space-y-2">
+        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+          {/* Usar diferentes límites según el tamaño de pantalla */}
+          <span className="sm:hidden">
+            {description.slice(0, maxChars)}...
+          </span>
+          <span className="hidden sm:inline">
+            {description.slice(0, maxCharsDesktop)}...
+          </span>
+        </p>
+        <button
+          onClick={() => setExpandedDescriptionId(projectId)}
+          className="flex items-center gap-1 text-xs font-medium text-theme_light_orange dark:text-theme_light_green hover:text-theme_light_brown dark:hover:text-white transition-colors"
+        >
+          <PlusCircle className="w-3 h-3" />
+          Leer más
+        </button>
+      </div>
+    )
+  }
+
   return (
     <div className="space-y-8">
       <div className="relative">
@@ -122,6 +179,7 @@ export default function ProjectGrid({ projects }) {
               githubLink={project.githubLink}
               liveLink={project.liveLink}
               renderTechnologiesContent={() => renderTechnologies(project.technologies, project.id)}
+              renderDescriptionContent={() => renderDescription(project.description, project.id)}
             />
           </motion.div>
         ))}
