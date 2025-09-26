@@ -8,6 +8,7 @@ function TechnologySlider() {
   const tabs = [
     { id: "frontend", label: "Frontend" },
     { id: "backend", label: "Backend" },
+    { id: "vision", label: "Visión" },
     { id: "tools", label: "Herramientas" },
   ]
 

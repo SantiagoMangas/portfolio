@@ -47,6 +47,7 @@ const CardProjects = ({
         </div>
 
         <div className="flex gap-3">
+        {githubLink && (
           <a
             href={githubLink}
             target="_blank"
@@ -56,7 +57,9 @@ const CardProjects = ({
             <FaGithub className="text-lg group-hover/btn:rotate-12 transition-transform" />
             <span className="text-sm font-medium">Code</span>
           </a>
+        )}
 
+        {liveLink && (
           <a
             href={liveLink}
             target="_blank"
@@ -66,7 +69,8 @@ const CardProjects = ({
             <span className="text-sm font-medium">Live</span>
             <FiExternalLink className="text-sm group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
           </a>
-        </div>
+        )}
+      </div>
       </div>
 
       {/* Efecto de brillo en hover */}

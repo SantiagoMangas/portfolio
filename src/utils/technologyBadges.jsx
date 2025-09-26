@@ -12,7 +12,8 @@ import {
   FaGitAlt,
   FaCode,
   FaJava,
-  FaPython,   
+  FaPython,
+  FaRobot,   
 } from "react-icons/fa"
 import {
   SiTailwindcss,
@@ -59,7 +60,8 @@ export const TechIcons = {
   SiJunit5,
   SiFlutter,
   SiDart,
-  SiOpencv,   
+  SiOpencv, 
+  FaRobot,   
 }
 
 // Función para renderizar los badges de tecnologías
@@ -249,6 +251,13 @@ export const renderTechnologyBadges = (tech) => {
           OpenCV
         </span>
       )
+    case "YOLOv8":
+      return (
+        <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#8B3FF0] shadow-sm">
+          <FaRobot className="mr-1.5 text-sm" />
+          YOLOv8
+        </span>
+      )
 
     default:
       return (
@@ -261,6 +270,7 @@ export const renderTechnologyBadges = (tech) => {
 
 export const technologiesByCategory = {
   frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind", "TypeScript", "Next.js", "Vite", "Flutter", "Dart"],
-  backend: ["Java", "Spring Boot", "JUnit", "Maven", "Node.js", "Express", "MongoDB", "MySQL", "REST API", "Python", "OpenCV"], 
+  backend: ["Java", "Spring Boot", "JUnit", "Maven", "Node.js", "Express", "MongoDB", "MySQL", "REST API"],
+  vision: ["Python", "OpenCV", "YOLOv8"],  
   tools: ["Git", "GitHub", "VS Code", "NPM", "Postman"],
 }

@@ -6,7 +6,6 @@ export const projects = [
       imageUrl: "/images/sistema_bancario.png",
       technologies: ["Java", "Spring Boot", "JUnit", "Maven"],
       githubLink: "https://github.com/SantiagoMangas/tup2024/tree/master",
-      liveLink: "https://ejemplo.com/demo",
     },
     {
       id: "2",
@@ -15,7 +14,6 @@ export const projects = [
       imageUrl: "/images/PokeApi.png",
       technologies: ["Flutter", "Dart", "Node.js", "REST API"],
       githubLink: "https://github.com/juanmontecino/FlutterPrototipe",
-      liveLink: "https://ejemplo.com/demo2",
     },
     {
       id: "3",
@@ -32,8 +30,25 @@ export const projects = [
       description: "Clon de la aplicación de Slack Desarrollado en la cursada de Diplomatura FullStack.",
       imageUrl: "/images/Slack.png",
       technologies: ["React", "Node.js", "Express", "MySQL"],
-      githubLink: "https://github.com/usuario/proyecto4",
+      githubLink: "https://github.com/SantiagoMangas/back-slack",
       liveLink: "https://front-slack.vercel.app/",
     },
+    {
+    id: "5",
+    title: "Airbag Fan Page",
+    description: "Sitio web estático dedicado a la banda Airbag. Incluye un slider de imágenes, navbar estilizado y secciones de contacto con enlaces oficiales.",
+    imageUrl: "/images/Airbag.png",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    githubLink: "https://github.com/SantiagoMangas/Airbag",
+    liveLink: "https://airbag-mu.vercel.app/", 
+  },
+    {
+    id: "6",
+    title: "Computer Vision Internship - Antares Technologies",
+    description: "Pasantía profesional en visión por computadora. Implementación de modelos con OpenCV y técnicas de Deep Learning para reconocimiento visual en entornos de prueba.",
+    imageUrl: "/images/Antares.png", 
+    technologies: ["Python", "OpenCV", "YOLOv8"],
+    githubLink: "https://github.com/SantiagoMangas/vision-projects", 
+  },
   ]
   
