@@ -12,6 +12,7 @@ import {
   FaGitAlt,
   FaCode,
   FaJava,
+  FaPython,   
 } from "react-icons/fa"
 import {
   SiTailwindcss,
@@ -26,6 +27,7 @@ import {
   SiJunit5,
   SiFlutter,
   SiDart,
+  SiOpencv,   
 } from "react-icons/si"
 import { VscCode } from "react-icons/vsc"
 
@@ -43,6 +45,7 @@ export const TechIcons = {
   FaGitAlt,
   FaCode,
   FaJava,
+  FaPython,   
   SiTailwindcss,
   SiExpress,
   SiMongodb,
@@ -56,6 +59,7 @@ export const TechIcons = {
   SiJunit5,
   SiFlutter,
   SiDart,
+  SiOpencv,   
 }
 
 // Función para renderizar los badges de tecnologías
@@ -231,6 +235,21 @@ export const renderTechnologyBadges = (tech) => {
         </span>
       )
 
+    case "Python":
+      return (
+        <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#3776AB] shadow-sm">
+          <FaPython className="mr-1.5 text-sm" />
+          Python
+        </span>
+      )
+    case "OpenCV":
+      return (
+        <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#5C3EE8] shadow-sm">
+          <SiOpencv className="mr-1.5 text-sm" />
+          OpenCV
+        </span>
+      )
+
     default:
       return (
         <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-gray-500 shadow-sm">
@@ -242,6 +261,6 @@ export const renderTechnologyBadges = (tech) => {
 
 export const technologiesByCategory = {
   frontend: ["HTML", "CSS", "JavaScript", "React", "Tailwind", "TypeScript", "Next.js", "Vite", "Flutter", "Dart"],
-  backend: ["Java", "Spring Boot", "JUnit", "Maven", "Node.js", "Express", "MongoDB", "MySQL", "REST API"],
+  backend: ["Java", "Spring Boot", "JUnit", "Maven", "Node.js", "Express", "MongoDB", "MySQL", "REST API", "Python", "OpenCV"], 
   tools: ["Git", "GitHub", "VS Code", "NPM", "Postman"],
 }
