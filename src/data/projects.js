@@ -50,5 +50,14 @@ export const projects = [
       technologies: ["Python", "OpenCV", "YOLOv8"],
       githubLink: "https://github.com/SantiagoMangas/vision-projects", 
     },
+    {
+      id: "7",
+      title: "Dra Luciana Mangas",
+      description: "Pagina de información personal y de blog para la Dra Luciana Mangas",
+      imageUrl: "/images/DraLucianaMangas.png", 
+      technologies: ["React", "HTML", "CSS", "TypeScript, Next.js"],
+      githubLink: "https://github.com/SantiagoMangas/dra_luciana", 
+      liveLink: "https://dra-luciana.vercel.app/",
+    }
   ]
   
