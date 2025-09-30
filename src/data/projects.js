@@ -63,7 +63,7 @@ export const projects = [
       id: "8",
       title: "Detector de Defectos Circulares - Antares Technologies",
       description: "Sistema automatizado de inspección visual para control de calidad en piezas circulares, utilizando análisis avanzado de color y luminancia en el espacio Lab para detectar anomalías superficiales.",
-      imageUrl: "/images/", 
+      imageUrl: "/images/DeteccionCircular.png", 
       technologies: ["Python", "OpenCV"],
       githubLink: "https://github.com/SantiagoMangas/vision-lab-surface-detect",
     }
