@@ -29,7 +29,7 @@ export const projects = [
       title: "Slack FullStack",
       description: "Clon de la aplicación de Slack Desarrollado en la cursada de Diplomatura FullStack.",
       imageUrl: "/images/Slack.png",
-      technologies: ["React", "Node.js", "Express", "MySQL"],
+      technologies: ["React", "Node.js", "Express", "MySQL", "CSS", "JavaScript"],
       githubLink: "https://github.com/SantiagoMangas/back-slack",
       liveLink: "https://front-slack.vercel.app/",
     },
@@ -53,7 +53,7 @@ export const projects = [
     {
       id: "7",
       title: "Dra Luciana Mangas",
-      description: "Pagina de información personal y de blog para la Dra Luciana Mangas",
+      description: "Pagina de información personal y de blog para la Dra Luciana Mangas.",
       imageUrl: "/images/DraLucianaMangas.png", 
       technologies: ["React", "HTML", "CSS", "TypeScript", "Next.js"],
       githubLink: "https://github.com/SantiagoMangas/dra_luciana", 

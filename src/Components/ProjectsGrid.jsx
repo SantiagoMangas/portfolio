@@ -75,7 +75,7 @@ export default function ProjectGrid({ projects }) {
   // Función para renderizar la descripción con límite de caracteres
   const renderDescription = (description, projectId) => {
     const isExpanded = expandedDescriptionId === projectId
-    const maxChars = 100 // Límite de caracteres para móvil
+    const maxChars = 101 // Límite de caracteres para móvil
     const maxCharsDesktop = 130 // Límite de caracteres para desktop
 
     // Si la descripción es corta, mostrarla completa
