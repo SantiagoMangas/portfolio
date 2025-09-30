@@ -58,6 +58,14 @@ export const projects = [
       technologies: ["React", "HTML", "CSS", "TypeScript, Next.js"],
       githubLink: "https://github.com/SantiagoMangas/dra_luciana", 
       liveLink: "https://dra-luciana.vercel.app/",
+    },
+    {
+      id: "8",
+      title: "Detector de Defectos Circulares - Antares Technologies",
+      description: "Sistema automatizado de inspección visual para control de calidad en piezas circulares, utilizando análisis avanzado de color y luminancia en el espacio Lab para detectar anomalías superficiales.",
+      imageUrl: "/images/", 
+      technologies: ["Python", "OpenCV"],
+      githubLink: "https://github.com/SantiagoMangas/vision-lab-surface-detect",
     }
   ]
   
