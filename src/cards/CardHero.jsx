@@ -10,14 +10,13 @@ export default function HeroCard() {
       transition={{ duration: 0.7, delay: 0.4 }}
     >
       <div className="relative w-full max-w-sm">
-        {/* Tarjeta principal con imagen */}
         <motion.div
           className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl overflow-hidden border border-gray-100 p-3 transition-all duration-100 hover:-translate-y-1 hover:shadow-2xl"
           whileHover={{ y: -5 }}
         >
           <div className="relative overflow-hidden rounded-xl aspect-square">
             <img
-              src="images/logoHero.jpeg"
+              src="images/Hero.jpg"
               alt="Santiago Mangas"
               className="w-full h-full object-cover"
             />
@@ -29,7 +28,6 @@ export default function HeroCard() {
           </div>
         </motion.div>
 
-        {/* Badges flotantes */}
         <motion.div
           className="absolute -right-4 top-1/4 flex items-center justify-center h-12 w-12 sm:h-14 sm:w-14 rounded-full bg-theme_teal/70 shadow-lg"
           initial={{ scale: 0, opacity: 0 }}

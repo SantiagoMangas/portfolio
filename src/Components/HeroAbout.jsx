@@ -6,11 +6,11 @@ function HeroAbout() {
   return (
     <section className="bg-theme_light_fond dark:bg-black px-6 md:px-10 lg:px-20 py-20">
       <div className="bg-[#F0A04B]/60 dark:bg-[#F0A04B]/50 absolute top-36 right-0 w-80 h-48 rounded-full  blur-3xl pointer-events-none z-0"></div>
-      {/* Header Section with Profile */}
+      
       <div className="flex flex-col md:flex-row items-center gap-12 mb-12 max-w-6xl mx-auto">
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-[#88D66C]/20 dark:border-[#73BBA3]/20 shadow-lg">
-            <img src="images/logoHero.jpeg" alt="Profile" className="object-cover w-full h-full" />
+            <img src="images/Hero.jpg" alt="Profile" className="object-cover w-full h-full" />
           </div>
         </div>
 
