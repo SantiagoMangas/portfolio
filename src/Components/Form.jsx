@@ -1,8 +1,6 @@
-import React from "react";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion";
 import { RiMailSendLine } from "react-icons/ri";
-import ContactRedes from "./ContactRedes";  
 
 const Form = () => {
   const onSubmit = async (event) => {

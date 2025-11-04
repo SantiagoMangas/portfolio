@@ -5,7 +5,7 @@ import { Home, Phone, Info, Briefcase } from "lucide-react"
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
-  const location = useLocation() // Get current location/path
+  const location = useLocation() 
 
   const handleNav = () => {
     setNav(!nav)

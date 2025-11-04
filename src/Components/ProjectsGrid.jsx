@@ -185,7 +185,6 @@ export default function ProjectGrid({ projects }) {
         ))}
       </div>
 
-      {/* Estado vacío con colores del tema */}
       {filteredProjects.length === 0 && (
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

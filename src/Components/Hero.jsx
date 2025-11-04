@@ -20,7 +20,7 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 relative z-10">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8">
-          {/* Columna de contenido */}
+          
           <motion.div
             className="w-full lg:w-1/2 text-center lg:text-left mt-8 lg:mt-0"
             initial={{ opacity: 0, x: -50 }}
@@ -89,8 +89,6 @@ export default function Hero() {
               Desarrollador de Bahía Blanca, Argentina. Especializado en crear aplicaciones web modernas, intuitivas y
               de alto rendimiento.
             </motion.p>
-
-            {/* Botones de acción */}
             <motion.div
               className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8"
               initial={{ opacity: 0, y: 20 }}
@@ -101,7 +99,6 @@ export default function Hero() {
               <VerProjects />
             </motion.div>
 
-            {/* Social links */}
             <motion.div
               className="flex flex-wrap justify-center lg:justify-start gap-4"
               initial={{ opacity: 0, y: 20 }}

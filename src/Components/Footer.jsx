@@ -17,7 +17,6 @@ const Footer = () => {
             <p className="text-sm mt-1 text-black/70 dark:text-white/70">Desarrollador FullStack</p>
           </div>
 
-        {/* Enlaces rápidos */}
         <div className="flex flex-wrap justify-center gap-6">
           {[
             { text: "Inicio", path: "/" },
@@ -39,7 +38,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Derechos de autor */}
         <div className="mt-8 pt-4 border-t border-gray-200 dark:border-gray-500 text-center text-xs text-black/70 dark:text-white/70">
           <p>© {currentYear} Santiago Mangas. Todos los derechos reservados.</p>
         </div>

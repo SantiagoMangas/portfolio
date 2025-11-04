@@ -69,7 +69,6 @@ function ContactRedes() {
                     className={`absolute inset-0 bg-gradient-to-br ${method.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}
                   ></div>
 
-                  {/* Icono con fondo gradiente */}
                   <div
                     className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${method.gradient} text-white mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
@@ -99,7 +98,6 @@ function ContactRedes() {
                     </svg>
                   </a>
 
-                  {/* Efecto de brillo en hover */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 </div>
               </div>

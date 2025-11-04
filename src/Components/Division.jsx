@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Division = () => {
   return (
     <div className='relative overflow-hidden bg-theme_light_fond dark:bg-black py-16 md:py-24 lg:py-32'>

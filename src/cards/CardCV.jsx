@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Card = () => {
   return (
     <div className="relative duration-500 [transform:rotate3d(20_,-10,_1,_60deg)] hover:-rotate-0 group border border-theme_dark_green border-4 overflow-hidden rounded-2xl h-52 w-72 bg-theme_light_green p-5 flex flex-col items-start gap-4">

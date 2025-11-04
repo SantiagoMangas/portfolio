@@ -1,5 +1,3 @@
-import React from 'react';
-
 const CardUIUX = () => {
   return (
     <div className="flex flex-col w-full h-full p-9 space-y-3 relative  sm:items-center lg:items-start ">
