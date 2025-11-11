@@ -10,7 +10,7 @@ function HeroAbout() {
       <div className="flex flex-col md:flex-row items-center gap-12 mb-12 max-w-6xl mx-auto">
         <div className="w-full md:w-1/2 flex justify-center">
           <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-[#88D66C]/20 dark:border-[#73BBA3]/20 shadow-lg">
-            <img src="images/Hero.jpg" alt="Profile" className="object-cover w-full h-full" />
+            <img src="images/HeroCV.jpg" alt="Profile" className="object-cover w-full h-full" />
           </div>
         </div>
 

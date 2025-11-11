@@ -3,6 +3,7 @@ import Hero from '../Components/Hero';
 import Division from '../Components/Division';
 import ProjectsHome from '../Components/ProjectsHome';
 import Tecnologias from '../Components/Tecnologias';
+import TechnologySlider from '../Components/TechnologySlider';
 
 const Home = () => {
   return (
@@ -10,6 +11,8 @@ const Home = () => {
       <Hero />
       <Division />
       <ProjectsHome />
+      <Division />
+      <TechnologySlider />
       <Division />
       <Tecnologias />
     </>

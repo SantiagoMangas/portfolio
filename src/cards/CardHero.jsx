@@ -16,7 +16,7 @@ export default function HeroCard() {
         >
           <div className="relative overflow-hidden rounded-xl aspect-square">
             <img
-              src="images/Hero.jpg"
+              src="images/HeroCV.jpg"
               alt="Santiago Mangas"
               className="w-full h-full object-cover"
             />

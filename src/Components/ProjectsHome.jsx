@@ -1,5 +1,4 @@
 import CardProjects from "../cards/CardProjects";
-import comingSoon from "/images/comingSoon.jpg";
 import VerProjects from "../buttons/VerProjects";
 import { projects } from "../data/projects";
 
@@ -17,7 +16,7 @@ function Projects() {
 
       <div className="w-full max-w-5xl px-4 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 place-items-center">
-          {projects.map((project, index) => (
+          {projects.slice(0, 4).map((project, index) => (
             <div
               key={project.id}
               className={index > 1 ? "hidden md:block" : ""}
@@ -26,21 +25,19 @@ function Projects() {
                 title={project.title}
                 description={project.description}
                 technologies={project.technologies}
-                imageUrl={project.imageUrl || comingSoon}
+                imageUrl={project.imageUrl}
                 githubLink={project.githubLink}
                 liveLink={project.liveLink}
               />
             </div>
           ))}
 
-          {/* Botón "Ver Más"*/}
           <div className="md:hidden col-span-1 mt-4 mb-8 flex justify-center w-full">
             <VerProjects />
           </div>
         </div>
       </div>
 
-      {/* Botón "Ver Más" en full pantalla */}
       <div className="hidden md:block mt-12">
         <VerProjects />
       </div>
