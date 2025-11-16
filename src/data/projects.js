@@ -20,7 +20,7 @@ export const projects = [
       title: "Dra Luciana Mangas",
       description: "Pagina de información personal y de blog para la Dra Luciana Mangas.",
       imageUrl: "/images/DraLucianaMangas.png", 
-      technologies: ["React", "HTML", "CSS", "TypeScript", "Next.js"],
+      technologies: ["React", "TypeScript", "Next.js", "Tailwind"],
       githubLink: "https://github.com/SantiagoMangas/dra_luciana", 
       liveLink: "https://dra-luciana.vercel.app/",
     },
@@ -66,6 +66,15 @@ export const projects = [
       imageUrl: "/images/DeteccionCircular.png", 
       technologies: ["Python", "OpenCV"],
       githubLink: "https://github.com/SantiagoMangas/vision-lab-surface-detect",
-    }
+    },
+    {
+    id: "9",
+    title: "Club Liniers Voley - Campaña Liga Federal 2026",
+    description: "Landing page moderna y responsiva para la campaña de donaciones del equipo de vóley del Club Liniers de Bahía Blanca, con integración de Mercado Pago, WhatsApp y sistema de sponsors.",
+    imageUrl: "/images/Liniers.png", 
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind"],
+    githubLink: "https://github.com/SantiagoMangas/LiniersFederal",
+    liveLink: "https://liniers-federal.vercel.app/" 
+  }
   ]
   

@@ -97,7 +97,7 @@ export const renderTechnologyBadges = (tech) => {
       )
     case "Tailwind":
       return (
-        <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#003159] dark:bg-[#0D4A6C] shadow-sm">
+        <span className="flex items-center px-2.5 py-1 text-xs font-medium rounded-lg text-white bg-[#06B6D4] shadow-sm">
           <SiTailwindcss className="mr-1.5 text-sm" />
           Tailwind
         </span>
