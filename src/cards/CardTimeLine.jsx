@@ -2,15 +2,37 @@
 import { motion } from "framer-motion"
 
 function CardTimeLine() {
-  // Datos de educación
-  const education = [
+  // Datos de trabajo
+  const work = [
     {
-      title: "Pasantía Profesional",
-      date: "2025 - actual",
-      description: "Pasantía de programación de IA Visual con python para la empresa de Antares Technologies",
+      title: "Programador Full Stack Jr",
+      date: "2026 - Actualidad",
+      description:
+        "Desarrollador Junior part-time en Antares Technologies, continuando la pasantía profesional en proyectos de software, visión por computadora e IA.",
       link: "https://antaresautomation.com/ar/",
       linkText: "Ver empresa",
       badge: "Actual",
+    },
+    {
+      title: "Pasantía Profesional en Programación",
+      date: "2025",
+      description:
+        "Pasantía profesional enfocada en desarrollo con Python y visión por computadora, trabajando en proyectos de IA visual para Antares Technologies.",
+      link: "https://antaresautomation.com/ar/",
+      linkText: "Ver empresa",
+      badge: null,
+    },
+  ];
+  // Datos de educación
+  const education = [
+    {
+      title: "Licenciatura en Ciencias de la Computación",
+      date: "2026 - Actualidad",
+      description:
+        "Estudiante de Licenciatura en Ciencias de la Computación | UNS Bahia Blanca.",
+      link: "https://uns.edu.ar/ingreso/carreras/carrera-detalle%7Ccarrera=50",
+      linkText: "Ver carrera",
+      badge: "En curso",
     },
     {
       title: "Técnico Universitario en Programación",
@@ -122,6 +144,8 @@ function CardTimeLine() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+
+      {/* Trabajo */}
       <div>
         <motion.h3
           className="text-2xl font-bold mb-6 text-theme_light_brown dark:text-white text-center md:text-left"
@@ -129,13 +153,17 @@ function CardTimeLine() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Educación
+          Trabajo
         </motion.h3>
+
         <ol className="relative border-s-2 border-theme_light_green dark:border-theme_teal pl-2">
-          {education.map((item, index) => renderTimelineItem(item, index, index === education.length - 1))}
+          {work.map((item, index) =>
+            renderTimelineItem(item, index, index === work.length - 1)
+          )}
         </ol>
       </div>
 
+      {/* Certificados */}
       <div>
         <motion.h3
           className="text-2xl font-bold mb-6 text-theme_light_brown dark:text-white text-center md:text-left"
@@ -145,10 +173,32 @@ function CardTimeLine() {
         >
           Certificados
         </motion.h3>
+
         <ol className="relative border-s-2 border-theme_light_green dark:border-theme_teal pl-2">
-          {certificates.map((item, index) => renderTimelineItem(item, index, index === certificates.length - 1))}
+          {certificates.map((item, index) =>
+            renderTimelineItem(item, index, index === certificates.length - 1)
+          )}
         </ol>
       </div>
+
+      {/* Educación */}
+      <div className="md:col-span-2">
+        <motion.h3
+          className="text-2xl font-bold mb-6 text-theme_light_brown dark:text-white text-center md:text-left"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          Educación
+        </motion.h3>
+
+        <ol className="relative border-s-2 border-theme_light_green dark:border-theme_teal pl-2">
+          {education.map((item, index) =>
+            renderTimelineItem(item, index, index === education.length - 1)
+          )}
+        </ol>
+      </div>
+
     </div>
   )
 }
